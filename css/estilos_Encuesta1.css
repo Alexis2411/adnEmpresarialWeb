@@ -46,9 +46,14 @@ li {
 
 /*Contenido - body*/
 .menuxd {
-    text-align: center;
-    margin-top: auto;
+
+
     
+}
+
+.padding-0{
+    padding-right:0;
+    padding-left:0;
 }
 
 .btn {
