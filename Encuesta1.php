@@ -151,12 +151,6 @@ include "includes/function/session.php";
 
     </div>
 
-
-
-
-
-
-
     <!-- Pie de pagina -->
     <footer class="page-footer font-small text-secondary pt-4"
         style="background-color:#404040; font-family:'Raleway', sans-serif;">

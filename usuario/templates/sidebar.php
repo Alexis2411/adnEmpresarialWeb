@@ -22,15 +22,16 @@
                         <p>Inicio</p>
                     </a>
                 </li>
-                <li class="nav-item has-treeview">
+
+                <li class="nav-item">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-pencil-ruler"></i>
                         <p>
                             Encuestas
-                            <i class="right fas fa-angle-left"></i>
+
                         </p>
                     </a>
-                    <ul class="nav nav-treeview">
+                    <ul class="nav">
                         <li class="nav-item">
                             <a href="Encuesta1.php" class="nav-link">
                                 <i class="nav-icon far fa-check-circle text-info"></i>
@@ -39,15 +40,16 @@
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item has-treeview">
+
+                <li class="nav-item">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-clipboard"></i>
                         <p>
                             Resultados
-                            <i class="right fas fa-angle-left"></i>
+
                         </p>
                     </a>
-                    <ul class="nav nav-treeview">
+                    <ul class="nav">
                         <li class="nav-item">
                             <a href="UsuarioResultado1.php" class="nav-link">
                                 <i class="nav-icon far fa-check-circle text-info"></i>
