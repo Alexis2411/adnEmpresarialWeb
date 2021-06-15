@@ -33,7 +33,7 @@
                     </a>
                     <ul class="nav">
                         <li class="nav-item">
-                            <a href="Encuesta1.php" class="nav-link">
+                            <a href="ProcesosAdministrativos.php" class="nav-link">
                                 <i class="nav-icon far fa-check-circle text-info"></i>
                                 <p>Procesos Administrativos</p>
                             </a>
