@@ -20,9 +20,9 @@ session_start();
       include("includes/templates/menu.php");
     ?>
     <!--</menu>-->
-
     <main class="main">
 
+        <!--
         <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -35,8 +35,28 @@ session_start();
                 </div>
             </div>
         </div>
-
+-->
         <div class="container bg-light">
+
+            <div class="row" >
+                <div class="col-lg-12 mx-auto text-center" style="font-size: 2.3rem; margin: 20px; font-weight: bolder">
+                    Indicador de gestión del proceso administrativo
+                </div>
+                <div class="col-lg-6 d-flex justify-content-center">
+                    <ul>
+                        <li>¿Qué es?</li>
+                        <li>¿Cómo se mide?</li>
+                        <li>Los componentes</li>
+                        <li>¿Para qué sirve?</li>
+                        <br>
+                        <a href="MenuEncuestas.php" class="btn btn-primary btn-lg text-white font-weight-bold" style="margin-top: 50px;">REGISTRATE</a>
+                    </ul>
+                </div>
+
+                <div class="col-lg-6 d-flex justify-content-center">
+                    imagen aquí
+                </div>
+            </div>
             <br>
             
             <section class="featurette" style="margin:30px;">
