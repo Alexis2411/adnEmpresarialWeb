@@ -1,6 +1,6 @@
 <?php
 /* Desarrollo */
-    define('HOST_DB','192.168.1.101:9006');
+    define('HOST_DB','192.168.0.1:9006');
     define('USER_DB','root');
     define('PASS_DB','12334');
     define('NAME_DB','encuestauv');

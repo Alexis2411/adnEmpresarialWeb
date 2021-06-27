@@ -82,7 +82,7 @@ include "includes/function/session.php";
 
                             <div class="col-md-6">
                                 <div class="row">
-                                    <div class="col-md-4 d-flex " style="max-width: 100% ; width: 100%">
+                                    <!-- <div class="col-md-4 d-flex " style="max-width: 100% ; width: 100%"> -->
                                         <!-- Contenido 4 columnas -->
                                         <?php
                                         include "includes/function/funciones.php";
@@ -91,7 +91,8 @@ include "includes/function/session.php";
                                             if ($seccion) {
                                                 foreach ($seccion as $row) {
                                                     ?>
-                                                    <div class="card" style="margin: 2px">
+                                                        <div class="col-lg-6 mx-auto">
+                                                            <div class="card shadow-sm">
                                                         <img class="card-img-top image-responsive" src="<?php echo $row["imagen"] ?>" alt="Card image cap" max-width="100%" width="80%">
                                                         <div class="card-body">
                                                             <h5 class="text-center font-weight-bold" style="font-size: 1rem; width: fit-content">
@@ -126,6 +127,7 @@ include "includes/function/session.php";
 
                                                         </div>
                                                     </div>
+                                                        </div>
                                                     <?php
                                                 }
                                             } else {
@@ -157,7 +159,7 @@ include "includes/function/session.php";
                                         ?>
 
                                         <!-- Contenido 4 columnas -->
-                                    </div>
+                                    <!-- </div> -->
                                 </div>
                             </div>
 
