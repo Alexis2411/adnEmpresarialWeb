@@ -42,19 +42,23 @@ session_start();
                 <div class="col-lg-12 mx-auto text-center" style="font-size: 2.3rem; margin: 20px; font-weight: bolder">
                     Indicador de gestión del proceso administrativo
                 </div>
-                <div class="col-lg-6 d-flex justify-content-center">
+                <div class="col-lg-6 d-flex justify-content-center align-items-center">
                     <ul>
-                        <li>¿Qué es?</li>
-                        <li>¿Cómo se mide?</li>
-                        <li>Los componentes</li>
-                        <li>¿Para qué sirve?</li>
+                        <br>
+                        <li><a href="#" style="text-decoration: none;">¿Qué es? </a></li>
+                        <br>
+                        <li><a href="#" style="text-decoration: none;">¿Cómo se mide?</a></li>
+                        <br>
+                        <li><a href="#" style="text-decoration: none;">Los componentes</a></li>
+                        <br>
+                        <li><a href="#" style="text-decoration: none;">¿Para qué sirve?</a></li>
                         <br>
                         <a href="MenuEncuestas.php" class="btn btn-primary btn-lg text-white font-weight-bold" style="margin-top: 50px;">REGISTRATE</a>
                     </ul>
                 </div>
 
                 <div class="col-lg-6 d-flex justify-content-center">
-                    imagen aquí
+                    <img src="img/procesoadmin.jpg" class="img-fluid">
                 </div>
             </div>
             <br>
