@@ -45,13 +45,13 @@ session_start();
                 <div class="col-lg-6 d-flex justify-content-center align-items-center">
                     <ul>
                         <br>
-                        <li><a href="#" style="text-decoration: none;">¿Qué es? </a></li>
+                        <li><a href="Presentacion.php#queEs" style="text-decoration: none;">¿Qué es? </a></li>
                         <br>
-                        <li><a href="#" style="text-decoration: none;">¿Cómo se mide?</a></li>
+                        <li><a href="Presentacion.php#comoSeMide" style="text-decoration: none;">¿Cómo se mide?</a></li>
                         <br>
-                        <li><a href="#" style="text-decoration: none;">Los componentes</a></li>
+                        <li><a href="Presentacion.php#componentes" style="text-decoration: none;">Los componentes</a></li>
                         <br>
-                        <li><a href="#" style="text-decoration: none;">¿Para qué sirve?</a></li>
+                        <li><a href="Presentacion.php#paraQueSirve" style="text-decoration: none;">¿Para qué sirve?</a></li>
                         <br>
                         <a href="MenuEncuestas.php" class="btn btn-primary btn-lg text-white font-weight-bold" style="margin-top: 50px;">REGISTRATE</a>
                     </ul>
