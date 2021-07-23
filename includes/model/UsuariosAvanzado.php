@@ -62,13 +62,18 @@ if($action == 'ajax'){
 									if ($section) {
 										foreach ($section as $sec) {
 											$question =  numPreguntas($sec['id_seccion']);
+
+											/* Mostrar B1...B10
 											if ($question) {
 												foreach ($question as $ques) {
 													?>
 													<th>B<?php echo $ques['numero_pregunta'] ?></th>
-													<?php 
+													<?php
 												}
 											}
+*/
+
+
 											?>
 												<th>Seccion <?php echo romano($sec["id_seccion"]) ?></th>
 											<?php
@@ -104,25 +109,32 @@ if($action == 'ajax'){
 						$completo = $score['completo'];
 						$pregunta = getPreguntas($score["id_seccion"]);
 						if ($pregunta) {
-							foreach ($pregunta as $pregun) {
+
+						    /* Mostrar B1...B10
+						    foreach ($pregunta as $pregun) {
 								$bloque = bloqueScore($usuario, $pregun['id_pregunta']);
 								if ($bloque) {
 									foreach ($bloque as $res) {
 									if ($completo) {
-										$res['pregunta'] == null? $valorP = 0 : $valorP = $res['pregunta'];
+
+									    $res['pregunta'] == null? $valorP = 0 : $valorP = $res['pregunta'];
 										$totalBloque = $res['valor'] + $valorP;
 										?>
+
                                 <td><?php echo $totalBloque;?></td>
                                 <?php
 									}else {
 										?>
-                                <td>N/D</td>
+                                 <td>N/D</td>
                                 <?php
 									}
 								}
-								
+
 							}
 						}
+						*/
+
+
 						$complete = scoreExport($score["id_seccion"], $usuario);
                     	foreach($complete as $comp){
 							if ($comp["total"] != null) {
@@ -139,6 +151,9 @@ if($action == 'ajax'){
                 }
 				
 			}
+
+
+
 			?>
                             </tr>
                             <?php

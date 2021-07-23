@@ -23,7 +23,7 @@ include "includes/function/session.php";
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <div class="container-fluid text-center">
-                <h1> Investigación #1 | Procesos Administrativos</h1>
+                <h1>Indicador de gestión del proceso administrativo</h1>
             </div><!-- /.container-fluid -->
         </section>
 
