@@ -182,7 +182,7 @@ if($action == 'ajax'){
 		?>
 		<?php echo $table; ?>
     </tbody>
-    <tfoot class="table-dark">
+  <!---  <tfoot class="table-dark">
         <tr>
             <th>Directivo</th>
             <th>Cargo</th>
@@ -192,7 +192,7 @@ if($action == 'ajax'){
             <th>Antiguedad</th>
             <th>Más</th>
         </tr>
-    </tfoot>
+    </tfoot> -->
 </table>
 <?php echo $modal; ?>
 <nav aria-label="Page navigation example">
