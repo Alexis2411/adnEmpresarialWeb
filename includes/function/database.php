@@ -9,7 +9,7 @@
 */
 class database{
 	//Desarrollo
-	private $host='192.168.1.67:9006';//generalmente suele ser "127.0.0.1"
+	private $host='192.168.1.101:9006';//generalmente suele ser "127.0.0.1"
 	private $user='root';//Usuario de tu base de datos
 	private $pass='12334';//Contraseña del usuario de la base de datos
 	private $db='encuestauv';//Nombre de la base de datos

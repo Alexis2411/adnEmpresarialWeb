@@ -339,6 +339,7 @@ function validaCampos() {
     var per_page=$("#per_page").val();
     var parametros = {"action":"ajax","page":page,'giro':giro,'antiguedad':antiguedad,'colaboradores':colaboradores,'pais':pais,'estado':estado,'ciudad':ciudad,'per_page':per_page};
     $("#loader").fadeIn('slow');
+
     $.ajax({
       url:'includes/model/UsuariosAvanzado.php',
       data: parametros,

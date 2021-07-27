@@ -12,7 +12,7 @@ include "includes/function/funciones.php";
     ?>
     <title>ADN | Registros</title>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-    <script src="js/app.js"></script>
+    <script src="js/dashboard.js"></script>
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
