@@ -11,6 +11,8 @@ if ($action == 'ajax') {
     $offset = ($page - 1) * $per_page;
     //Cuenta el número total de filas de la tabla*/
     $totalUser = totalUser();
+    $msg2 = 2;
+    $msg = "Está por eliminar el registro.  ¿Desea eliminarlo?";
     $numrows = 1;
     if ($totalUser) {
         foreach ($totalUser as $row) {
@@ -47,7 +49,7 @@ if ($action == 'ajax') {
                 <th>Giro</th>
                 <th>Tamaño</th>
                 <th>Antiguedad</th>
-                <th>Más</th>
+                <th colspan="2" style="text-align: center">Opciones</th>
             </tr>
             </thead>
             <tbody>
@@ -70,16 +72,31 @@ if ($action == 'ajax') {
 
                 $table .= "
 				<tr>
-            		<td> " . $nombre . " </td>
-            		<td> " . $cargo . " </td>
-            		<td> " . $row['nombre_empresa'] . " </td>
-            		<td> " . $row['tipo_empresa'] . " </td>
-            		<td> " . $row['num_colaboradores'] . " </td>
-            		<td> " . $row['antiguedad'] . " </td>
+            		<td> {$nombre} </td>
+            		<td> {$cargo} </td>
+            		<td> {$row['nombre_empresa']} </td>
+            		<td> {$row['tipo_empresa']} </td>
+            		<td> {$row['num_colaboradores']} </td>
+            		<td> {$row['antiguedad']} </td>
             		<td>
                 	<button type='button' class='btn btn-success' data-toggle='modal'
-                	    data-target='#modalUser" . $row['id_usuario'] . "'>
+                	    data-target='#modalUser{$row['id_usuario']}'>
                 	    Ver más...
+                	</button>
+            		</td>
+            		<td>
+                	<button type='button' class='btn btn-warning'  >
+                	 <a  
+                	    style='text-decoration: none; color: whitesmoke;'  
+                	    href='delete.php?id_usuario={$row['id_usuario']}'
+                	    onclick='return confirm(\"$msg\")'>
+                	    Eliminar 
+                	    
+                    </a> 
+                    
+                    
+                    
+                    
                 	</button>
             		</td>
         		</tr>

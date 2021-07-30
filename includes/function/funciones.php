@@ -203,6 +203,16 @@ function totalUser()
     }
 }
 
+function deleteUser($id){
+    include 'conexion.php';
+    try{
+        return $con->query("DELETE FROM usuario WHERE id_usuario = $id ");
+    }catch (Exception $e){
+        echo "Error!!" . $e->getMessage() . "<br>";
+        return false;
+    }
+}
+
 function scoreExport($id, $user)
 {
     include 'conexion.php';

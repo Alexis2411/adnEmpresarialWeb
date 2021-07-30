@@ -1,11 +1,12 @@
 <?php
-// Desarrollo
-    define('HOST_DB','192.168.0.1:9006');
+// DEV
+    define('HOST_DB','localhost:9006');
     define('USER_DB','root');
     define('PASS_DB','12334');
     define('NAME_DB','encuestauv');
 
 
+// PROD
 /*
     define('HOST_DB','localhost');
     define('USER_DB','adnempre_admin');
