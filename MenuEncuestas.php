@@ -37,6 +37,17 @@ include "includes/function/session.php";
                                     <a href="Encuesta1.php" class="btn btn-pill text-white" style="background-color:#3D708D;"> COMENZAR</a>
                                 </td>
                             </tr>
+                            <tr>
+                                
+                            </tr>
+                            <tr>
+                            <td class="col-7">
+                                    <h3 class="card-title text-justify">Diagnóstico de la comunicación de apoyo</h3>
+                                </td>
+                                <td class="col-5">
+                                    <a href="EncuestaApoyo.php" class="btn btn-pill text-white" style="background-color:#3D708D;"> COMENZAR</a>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>

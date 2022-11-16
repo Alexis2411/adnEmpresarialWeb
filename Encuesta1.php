@@ -75,7 +75,7 @@ include "includes/function/session.php";
                     <?php
                     include "includes/function/funciones.php";
                     if (isset($_SESSION['usuario'])) {
-                        $seccion = obtSeccion();
+                        $seccion = obtSeccion(1, 4);
                         if ($seccion) {
                             foreach ($seccion as $row) {
                                 ?>

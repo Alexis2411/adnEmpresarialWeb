@@ -39,6 +39,14 @@
                             </a>
                         </li>
                     </ul>
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a href="ComunicacionDeApoyo.php" class="nav-link">
+                                <i class="nav-icon far fa-check-circle text-info"></i>
+                                <p>Diagnóstico para la comunicación de apoyo</p>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
 
                 <li class="nav-item">
@@ -54,6 +62,14 @@
                             <a href="UsuarioResultado1.php" class="nav-link">
                                 <i class="nav-icon far fa-check-circle text-info"></i>
                                 <p>Procesos Administrativos</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a href="UsuarioResultadoApoyo.php" class="nav-link">
+                                <i class="nav-icon far fa-check-circle text-info"></i>
+                                <p>Diagnóstico para la comunicación de apoyo</p>
                             </a>
                         </li>
                     </ul>
