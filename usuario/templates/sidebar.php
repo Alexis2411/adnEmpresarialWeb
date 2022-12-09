@@ -83,6 +83,14 @@
                     </ul>
                     <ul class="nav">
                         <li class="nav-item">
+                            <a href="UsuarioResultadoUEI.php" class="nav-link">
+                                <i class="nav-icon far fa-check-circle text-info"></i>
+                                <p>Uso de Estrategias de Influencia</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav">
+                        <li class="nav-item">
                             <a href="UsuarioResultadoEMD.php" class="nav-link">
                                 <i class="nav-icon far fa-check-circle text-info"></i>
                                 <p>Uso de Estrategias para Motivar a los Demás</p>

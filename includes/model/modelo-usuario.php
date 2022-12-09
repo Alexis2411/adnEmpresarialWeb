@@ -2,7 +2,7 @@
 $accion = $_POST['action'];
 $usuario = $_POST['username'];
 $password = $_POST['password'];
-define('MESAGE',"Error Interno");
+define('MESAGE', "Error Interno");
 
 if ($accion === 'login' && $usuario != '' && $password != '') {
     include '../function/conexion.php';
@@ -26,16 +26,16 @@ if ($accion === 'login' && $usuario != '' && $password != '') {
                     $respuesta = array(
                         'type' => 'success',
                         'title' => 'INICIANDO SESIÓN',
-                        'href'=>'MenuEncuestas.php'
+                        'href' => 'MenuEncuestas.php'
                     );
-                }else if($tipo === 2){
+                } else if ($tipo === 2) {
                     session_start();
                     $_SESSION['admin'] = $id_user;
                     $_SESSION['nombre'] = $name;
                     $respuesta = array(
                         'type' => 'success',
                         'title' => 'INICIANDO SESIÓN',
-                        'href'=>'AdminInicio.php'
+                        'href' => 'AdminInicio.php'
                     );
                 }
             } else {
@@ -61,14 +61,14 @@ if ($accion === 'login' && $usuario != '' && $password != '') {
         );
     }
     die(json_encode($respuesta));
-}elseif ($accion === 'invitado') {
+} elseif ($accion === 'invitado') {
     session_start();
     $_SESSION['invited'] = 'restringido';
     $_SESSION['nombre'] = "invitado";
     $respuesta = array(
         'type' => 'success',
         'title' => 'INICIANDO COMO INVITADO',
-        'href'=>'MenuEncuestas.php'
+        'href' => 'MenuEncuestas.php'
     );
     die(json_encode($respuesta));
 }
@@ -107,12 +107,13 @@ if ($accion == 'crear') {
             try {
                 include "../function/conexion.php";
                 $stmt = $con->prepare("SELECT correo FROM usuario WHERE correo = ? ");
-                $stmt->bind_param("s", $correo);
+                $stmt->bind_param('s', $correo);
                 $stmt->execute();
                 $stmt->bind_result($correoVerify);
                 $stmt->fetch();
                 if ($correoVerify == "") {
                     if (strlen($contrasena) > 7) {
+
                         if ($contrasena === $verificacion) {
                             $opciones = array(
                                 'cost' => 12
@@ -136,71 +137,72 @@ if ($accion == 'crear') {
                                         session_start();
                                         $_SESSION["usuario"] = $id_user;
                                         $_SESSION["nombre"] = $nombre;
-                                        $res = array(
-                                            "type" => "success",
-                                            "title" => "REGISTRADO CORRECTAMENTE",
-                                            "text" =>"SE HA REGISTRADO CORRECTAMENTE"
-                                        );
+                                        die(json_encode($res = array(
+                                            'type' => 'success',
+                                            'title' => 'REGISTRADO CORRECTAMENTE',
+                                            'text' => 'SE HA REGISTRADO CORRECTAMENTE'
+                                        )));
                                     } else {
-                                        $res = array(
-                                            "type" => "error",
-                                            "title" => "Internal Error 406",
-                                            "text"=> MESAGE
-                                        );
+                                        die(json_encode($res = array(
+                                            'type' => 'error',
+                                            'title' => 'Internal Error 406',
+                                            'text' => 'MESAGE'
+                                        )));
                                     }
                                 } else {
                                     $res = array(
-                                        "type" => "error",
-                                        "title" => "Internal Error 405",
-                                        "text"=> MESAGE
+                                        'type' => 'error',
+                                        'title' => 'Internal Error 405',
+                                        'text' => 'MESAGE'
                                     );
                                 }
                             } else {
                                 $res = array(
-                                    "type" => "error",
-                                    "title" => "Internal Error 404",
-                                    "text"=> MESAGE
+                                    'type' => 'error',
+                                    'title' => 'Internal Error 404',
+                                    'text' => 'MESAGE'
                                 );
                             }
                         } else {
-                            $res = array(
-                                "type" => "error",
-                                "title" => "lAS CONTRASEÑAS NO COINCIDEN",
-                                "text"=> MESAGE
-                            );
+                            die(json_encode($res = array(
+                                'type' => 'error',
+                                'title' => 'lAS CONTRASEÑAS NO COINCIDEN',
+                                'text' => 'MESAGE'
+                            )));
                         }
                     } else {
-                        $res = array(
-                            "type" => "error",
-                            "title" => "LA CONTRASEÑA ES MUY CORTA",
-                            "text"=> MESAGE
-                        );
+                        die(json_encode($res = array(
+                            'type' => 'error',
+                            'title' => 'LA CONTRASEÑA ES MUY CORTA',
+                            'text' => 'MESAGE'
+                        )));
                     }
                 } else {
-                    $res = array(
-                        "type" => "error",
-                        "title" => "EL CORREO YA EXISTE",
-                        "text"=> MESAGE
-                    );
+                    die(json_encode($res = array(
+                        'type' => 'error',
+                        'title' => 'EL CORREO YA EXISTE',
+                        'text' => 'MESAGE'
+                    )));
                 }
+                $stmt->close();
+                $con->close();
             } catch (Exception $e) {
                 echo "¡ERROR!" . $e->getMessage() . "<br>";
                 return false;
             }
         } else {
             $res = array(
-                "type" => "error",
-                "title" => "Internal Error 403",
-                "text"=> MESAGE
+                'type' => 'error',
+                'title' => 'Internal Error 403',
+                'text' => 'MESAGE'
             );
         }
     } else {
         $res = array(
-            "type" => "error",
-            "title" => "Internal Error 402",
-            "text"=> MESAGE
+            'type' => 'error',
+            'title' => 'Internal Error 402',
+            'text' => 'MESAGE'
         );
     }
-
     die(json_encode($res));
 }

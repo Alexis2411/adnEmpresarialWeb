@@ -161,7 +161,7 @@ include "includes/function/session.php";
             <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
         </div>
         <!-- Copyright -->
-        <!-- <script src="js/app.js"></script> -->
+        <script src="js/app.js"></script> 
 
     </footer>
     <!-- Pie de pagina -->

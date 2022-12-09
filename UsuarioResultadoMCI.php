@@ -23,7 +23,7 @@
       <!-- Content Header (Page header) -->
       <section class="content-header">
         <div class="container-fluid text-center">
-          <h1> Solución Creativa de Problemas </h1>
+          <h1> Manejo de Conflictos Interpersonales</h1>
         </div><!-- /.container-fluid -->
       </section>
 
@@ -41,7 +41,7 @@
                 <div class="card-body">
                     <div id="accordion">
                         <!-- we are adding the .class so bootstrap.js collapse plugin detects it -->
-                        <div class="col-md-12">
+                        <div class="col-md-41">
                             <div class="card card-default" style="background:#b3e5fc;">
                                 <div class="card-header">
                                     <a class="card-title text-dark" data-toggle="collapse" data-target="#collapseOne" aria-expanded="True" aria-controls="collapseOne" data-parent="#accordion" href="#collapseOne">
@@ -49,7 +49,7 @@
                                     </a>
                                     <h3>
                                         <?php
-                                        $complete = scoreSeccion(11);
+                                        $complete = scoreSeccion(29);
                                         $result1 = $complete -> fetch_assoc();
                                             if($result1["total"] < 1){
                                                 $result1["total"] = 0;
@@ -58,18 +58,18 @@
 
                                         <span class="badge
                                         <?php
-                                            if($result1["total"]/2 <= 101){
+                                            if($result1["total"]/2 <= 104){
                                                 echo $noPassed;
-                                            }elseif ($result1["total"]/2 > 101 && $result1["total"]/2 < 113){
+                                            }elseif ($result1["total"]/2 > 104 && $result1["total"]/2 < 122){
                                                 echo $mediumPassed;
-                                            }elseif ($result1["total"]/2 >= 114){
+                                            }elseif ($result1["total"]/2 <= 122){
                                                 echo $passed;
                                             }
                                         ?>
                                         float-right">
 
                                             <?php echo $result1["total"]/2; ?>
-                                             / 132
+                                             / 144
                                         </span>
 
 
@@ -88,17 +88,17 @@
                                         </thead>
                                         <tbody>
                                           <?php
-                                              $bloque = bloqueScore($_SESSION['usuario'], 30);
+                                              $bloque = bloqueScore($_SESSION['usuario'], 54);
                                               $p1 = $bloque -> fetch_assoc();
                                               ?>
                                                   <tr>
                                                     <td>
-                                                       Solución analítica de problemas
+                                                        Iniciar una queja
                                                     </td>
                                                     <td class="text-center">
                                                         <?php
                                                         $valor = ($p1["valor"] < 1 ? '0' :  $p1["valor"]);
-                                                        if ( $valor/2 <= 23){
+                                                        if ( $valor/2 <= 35){
                                                             echo '&#9679;';
                                                         }
                                                         ?>
@@ -106,7 +106,7 @@
                                                     <td class="text-center">
                                                         <?php
                                                         $valor = $p1["valor"] < 1 ? '0' :  $p1["valor"];
-                                                        if ( $valor/2 > 23 && $valor/2 < 26){
+                                                        if ( $valor/2 > 35 && $valor/2 < 41){
                                                             echo '&#9679;';
                                                         }
                                                         ?>
@@ -114,22 +114,22 @@
                                                     <td class="text-center">
                                                         <?php
                                                         $valor = $p1["valor"] < 1 ? '0' :  $p1["valor"];
-                                                        if ( $valor/2 >= 26){
+                                                        if ( $valor/2 >= 41){
                                                             echo '&#9679;';
                                                         }
                                                         ?>
                                                     </td>
                                                   </tr>
                                           <?php
-                                          $bloque = bloqueScore($_SESSION['usuario'], 31);
+                                          $bloque = bloqueScore($_SESSION['usuario'], 55);
                                           $p2 = $bloque -> fetch_assoc();
                                           ?>
                                             <tr>
-                                                <td>Solución creativa de problemas</td>
+                                                <td>Reponder a una crítica</td>
                                                 <td class="text-center">
                                                     <?php
                                                     $valor = $p2["valor"] < 1 ? '0' :  $p2["valor"];
-                                                    if ( $valor/2 <= 46){
+                                                    if ( $valor/2 <= 35){
                                                         echo '&#9679;';
                                                     }
                                                     ?>
@@ -137,7 +137,7 @@
                                                 <td class="text-center">
                                                     <?php
                                                     $valor = $p2["valor"] < 1 ? '0' :  $p2["valor"];
-                                                    if ( $valor/2 > 46 && $valor/2 < 52){
+                                                    if ( $valor/2 > 35 && $valor/2 < 41){
                                                         echo '&#9679;';
                                                     }
                                                     ?>
@@ -145,7 +145,7 @@
                                                 <td class="text-center">
                                                     <?php
                                                     $valor = $p2["valor"] < 1 ? '0' :  $p2["valor"];
-                                                    if ( $valor/2 >= 52){
+                                                    if ( $valor/2 > 41){
                                                         echo '&#9679;';
                                                     }
                                                     ?>
@@ -153,17 +153,17 @@
                                             </tr>
 
                                           <?php
-                                          $bloque = bloqueScore($_SESSION['usuario'], 32);
+                                          $bloque = bloqueScore($_SESSION['usuario'], 56);
                                           $p3 = $bloque -> fetch_assoc();
                                           ?>
                                             <tr>
                                                 <td>
-                                                Fomento de la creatividad
+                                                    Mediar un conflicto
                                                 </td>
                                                 <td class="text-center">
                                                     <?php
                                                     $valor = $p3["valor"] < 1 ? '0' :  $p3["valor"];
-                                                    if ( $valor/2 <= 32){
+                                                    if ( $valor/2 <= 35){
                                                         echo '&#9679;';
                                                     }
                                                     ?>
@@ -171,7 +171,7 @@
                                                 <td class="text-center">
                                                     <?php
                                                     $valor = $p3["valor"] < 1 ? '0' :  $p3["valor"];
-                                                    if ( $valor/2 > 32 && $valor/2 < 36){
+                                                    if ( $valor/2 > 35 && $valor/2 <= 41){
                                                         echo '&#9679;';
                                                     }
                                                     ?>
@@ -179,7 +179,7 @@
                                                 <td class="text-center">
                                                     <?php
                                                     $valor = $p3["valor"] < 1 ? '0' :  $p3["valor"];
-                                                    if ( $valor/2 >= 36){
+                                                    if ( $valor/2 > 41){
                                                         echo '&#9679;';
                                                     }
                                                     ?>
@@ -192,17 +192,17 @@
                             </div>
                         </div>
 
-                    <div class="col-md-12">
+                    <div class="col-md-41">
                         <?php
                             $total = $result1["total"]/2;
                         ?>
                       <div class="card card-default
                       <?php
-                        if($total <= 101){
+                        if($total <= 104){
                             echo $noPassed;
-                        }else if($total > 101 && $total < 114){
+                        }else if($total > 104 && $total < 122){
                             echo $mediumPassed;
-                        }else if($total >= 114){
+                        }else if($total >= 122){
                             echo $passed;
                         }
 
@@ -213,7 +213,7 @@
                           <h1>
                               <strong><i class="fas fa-award"></i>  PUNTUACIÓN TOTAL:
                                   <?php
-                                    echo $total;?> / 132
+                                    echo $total;?> / 144
                               </strong>
                           </h1>
                         </div>

@@ -81,7 +81,7 @@ include "includes/function/session.php";
                     <?php
                     include "includes/function/funciones.php";
                     if (isset($_SESSION['usuario'])) {
-                        $seccion = obtSeccion(30, 30);
+                        $seccion = obtSeccion(32, 32);
                         if ($seccion) {
                             foreach ($seccion as $row) {
                                 ?>
@@ -108,7 +108,7 @@ include "includes/function/session.php";
                                                 $puntajeTotal = "error";
                                             }
                                             ?>
-                                            <p class="text-center" style="font-size: 1rem; width: fit-content; margin: 0;">PUNTAJE: <?php echo $puntaje; ?> / <?php echo $puntajeTotal; ?> </p>
+                                            <p class="text-center" style="font-size: 1rem; width: fit-content; margin: 0;">PUNTAJE: <?php echo $puntaje/2; ?> / <?php echo $puntajeTotal/2; ?> </p>
                                             <p class="text-center" style="font-size: 1rem; width: fit-content; margin: 0;"><strong> CONCLUIDO </strong></p>
                                             <?php
                                         }else {
