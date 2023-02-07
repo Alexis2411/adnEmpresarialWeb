@@ -189,7 +189,7 @@ if (isset($_POST["end"]) && $_POST["end"] === "end") {
                                 "type" => "success",
                                 "title"=>"FINALIZADO CORRECTAMENTE",
                                 "text" =>"HA CONCLUIDO LA ENCUESTA CORRECTAMENTE",
-                                "href"=>"Encuesta1.php"
+                                "href"=>"UsuarioInicio.php" 
                             );
                         }else {
                             $res = array(
@@ -203,7 +203,7 @@ if (isset($_POST["end"]) && $_POST["end"] === "end") {
                             "type" => "success",
                             "title"=>"FINALIZADO CORRECTAMENTE",
                             "text" =>"LA ENCUESTA YA HA SIDO FINALIZADA",
-                            "href"=>"Encuesta1.php"
+                            "href"=>"UsuarioInicio.php"
                         );
                     }
                     

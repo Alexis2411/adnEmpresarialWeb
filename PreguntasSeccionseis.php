@@ -101,6 +101,7 @@ date_default_timezone_set('America/Mexico_City');
                 }else {
                   $class = 'btnEnd'; 
                   $text = "Finalizar";
+                  
                 }
                 $id = $row["id_pregunta"];
             ?>
