@@ -7,7 +7,7 @@ session_start();
 
 <head>
     <?php
-    include("includes/templates/head.php");
+    include("includes/templates/head.php");  
     tittle("Inicio");
     ?>
     <link rel="stylesheet" href="css/estilos_paginaweb.css">
@@ -17,10 +17,13 @@ session_start();
 
     <!--<menu>-->
     <?php
-    include("includes/templates/menu.php");
+    include("includes/templates/menu.php"); include("includes/templates/navbar.php");
+    ;
     ?>
+   
     <!--</menu>-->
     <main class="main">
+
         <!-- Jumbotron -->
         <div id="intro" class="p-5 text-center bg-light">
             <h1 class="mb-3 h2">Encuestas de Analisis Empresarial</h1>
@@ -32,48 +35,48 @@ session_start();
 
         <!--Main layout-->
         <main class="my-5">
-        <div class="container">
-      <!--Section: Content-->
-      <section class="text-center">
-        <div class="row">
-          <div class="col-lg-6 mb-4">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Indicador de gestión del proceso administrativo</h5>
-                <p class="card-text">
-                El indicador de gestión del proceso administrativo (IGPA) es un instrumento de índole cuantitativo que mide la implementación del proceso administrativo dentro de las organizaciones.
-                </p>
-                <img src="img/procesoadmin.jpg" class="img-fluid">
-              </div>
-            </div>
-          </div>
+            <div class="container">
+                <!--Section: Content-->
+                <section class="text-center">
+                    <div class="row">
+                        <div class="col-lg-6 mb-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Indicador de gestión del proceso administrativo</h5>
+                                    <p class="card-text">
+                                        El indicador de gestión del proceso administrativo (IGPA) es un instrumento de índole cuantitativo que mide la implementación del proceso administrativo dentro de las organizaciones.
+                                    </p>
+                                    <img src="img/procesoadmin.jpg" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
 
-          <div class="col-lg-6 mb-4">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Habilidades Directivas</h5>
-                <p class="card-text">
-                  <br>Encuestas disponibles <br><br>
-                  Diagnóstico de la Comunicación de Apoyo<br> 
-                  Evaluación del Manejo del estres<br>
-                  Solución Creativa de Problemas<br>
-                  Ganar Poder e Influencia<br>
-                  Uso de estrategias de influencia<br>
-                  Diagnóstico para Motivar a los Demás<br>
-                  Manejo de Conflictos Interpersonales<br>
-                  Facultamiento y Delegación Eficaces<br>
-                  Facultamiento Personal<br>
-                  Desarrollo de Equipos<br>
-                  Necesidad de Formación de Equipos<br>
-                  Liderar el cambio positivo<br>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+                        <div class="col-lg-6 mb-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Habilidades Directivas</h5>
+                                    <p class="card-text">
+                                        <br>Encuestas disponibles <br><br>
+                                        Diagnóstico de la Comunicación de Apoyo<br>
+                                        Evaluación del Manejo del estres<br>
+                                        Solución Creativa de Problemas<br>
+                                        Ganar Poder e Influencia<br>
+                                        Uso de estrategias de influencia<br>
+                                        Diagnóstico para Motivar a los Demás<br>
+                                        Manejo de Conflictos Interpersonales<br>
+                                        Facultamiento y Delegación Eficaces<br>
+                                        Facultamiento Personal<br>
+                                        Desarrollo de Equipos<br>
+                                        Necesidad de Formación de Equipos<br>
+                                        Liderar el cambio positivo<br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-        
-      <!--Section: Content-->
+
+                    <!--Section: Content-->
 
                     <!--Grid column-->
 
@@ -134,11 +137,11 @@ session_start();
                     <br>
                     <hr class="featurette-divider">
                     <br>
-                </div>
+            </div>
 
-                <div id="map-container-google-1" class="z-depth-1-half map-container" frameborder="0" style=" border:0;">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15097.588004549558!2d-97.03804447812368!3d18.913813817912317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x985793c74db2ba34!2sUniversidad%20Veracruzana!5e0!3m2!1ses!2smx!4v1606370225482!5m2!1ses!2smx" width="100%" height="425" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-                </div>
+            <div id="map-container-google-1" class="z-depth-1-half map-container" frameborder="0" style=" border:0;">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15097.588004549558!2d-97.03804447812368!3d18.913813817912317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x985793c74db2ba34!2sUniversidad%20Veracruzana!5e0!3m2!1ses!2smx!4v1606370225482!5m2!1ses!2smx" width="100%" height="425" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
 
         </main>
 

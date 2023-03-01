@@ -8,7 +8,7 @@ include "includes/function/session.php";
 
 <head>
     <?php
-    include("includes/templates/head.php");
+    include("includes/templates/head.php");  
     tittle("Encuesta");
     ?>
 </head>
@@ -17,7 +17,7 @@ include "includes/function/session.php";
 
     <!--Barra de navegación-->
     <?php
-    include("includes/templates/menu.php");
+    include("includes/templates/menu.php"); include("includes/templates/navbar.php");
     ?>
     <!--Barra de navegación-->
 

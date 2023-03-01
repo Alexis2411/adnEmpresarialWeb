@@ -7,7 +7,7 @@ session_start();
 
 <head>
     <?php
-    include("includes/templates/head.php");
+    include("includes/templates/head.php");  
     tittle("Inicio");
     ?>
     <link rel="stylesheet" href="css/estilos_paginaweb.css">
@@ -17,7 +17,7 @@ session_start();
 
     <!--<menu>-->
     <?php
-    include("includes/templates/menu.php");
+    include("includes/templates/menu.php"); include("includes/templates/navbar.php");
     ?>
     <!--</menu>-->
     <main class="main">

@@ -8,7 +8,7 @@ include "includes/function/session.php";
 
 <head>
     <?php
-    include("includes/templates/head.php");
+    include("includes/templates/head.php");  
     tittle("Encuesta");
     ?>
     <link rel="stylesheet" href="css/menuEncuestas.css">
@@ -16,7 +16,7 @@ include "includes/function/session.php";
 
 <body class="align-items-center" style="background: lightgray; font-size: 20px; line-height: 25px; margin:0; font-family:'Raleway', sans-serif;">
     <?php
-        include("includes/templates/menu.php");
+        include("includes/templates/menu.php"); include("includes/templates/navbar.php");
     ?>
     <div class="container justify-content-center align-items-center">
         <div class="row justify-content-center align-items-center">

@@ -32,7 +32,7 @@ date_default_timezone_set('America/Mexico_City');
 
 <head>
   <?php
-  include("includes/templates/head.php");
+  include("includes/templates/head.php");  
   $titulo ="Sección  $nombre";
   tittle($titulo);
   ?>
@@ -43,7 +43,7 @@ date_default_timezone_set('America/Mexico_City');
 
   <!--Encabezado de pagina --->
   <?php
-  include("includes/templates/menu.php");
+  include("includes/templates/menu.php"); include("includes/templates/navbar.php");
   ?>
   <main class="main">
     <div class="container" style="background-color:white; font-family: 'Raleway', sans-serif; margin-top: 48px; padding: 32px; border-radius: 20px;">

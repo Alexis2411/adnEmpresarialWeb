@@ -8,7 +8,7 @@
 
 <head>
     <?php
-      include("includes/templates/head.php");
+      include("includes/templates/head.php");  
       tittle("Inicio");
     ?>
 </head>
@@ -16,7 +16,7 @@
 <body style="background: lightgray; font-size: 20px; line-height: 25px; margin:0; font-family:'Raleway', sans-serif;">
     <!--<menu>-->
     <?php
-      include("includes/templates/menu.php");
+      include("includes/templates/menu.php"); include("includes/templates/navbar.php");
     ?>
     <!--</menu>-->
 

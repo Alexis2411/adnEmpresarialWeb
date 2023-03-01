@@ -11,7 +11,7 @@ if (isset($_SESSION["usuario"])) {
 
 <head>
   <?php
-  include("includes/templates/head.php");
+  include("includes/templates/head.php");  
   tittle("Registro");
   ?>
   <link rel="stylesheet" href="css/estilos-registro.css">
@@ -19,7 +19,7 @@ if (isset($_SESSION["usuario"])) {
 
 <body style="background: lightgray; font-size: 20px; line-height: 25px; margin:0; font-family:'Raleway', sans-serif;">
   <?php
-  include("includes/templates/menu.php");
+  include("includes/templates/menu.php"); include("includes/templates/navbar.php");
   ?>
   <!-- CONTENEDOR -->
   <div class="container">
