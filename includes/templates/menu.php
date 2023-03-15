@@ -7,7 +7,7 @@
     aria-controls="navbarToggler01" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarNavm">
+  <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav text-center"> 
       <li class="nav-item dropdown active">
       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
