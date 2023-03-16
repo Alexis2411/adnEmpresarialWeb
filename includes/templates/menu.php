@@ -12,13 +12,13 @@
       <li class="nav-item dropdown active">
       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
         aria-haspopup="true" aria-expanded="false">
-        Indicadores
+        Indicador del proceso administrativo
       </a>
       <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
         <a class="dropdown-item" href=Presentacion.php#queEs>¿Qué es?</a>
         <a class="dropdown-item" href=Presentacion.php#comoSeMide>¿Cómo se mide?</a>
         <a class="dropdown-item" href=Presentacion.php#paraQueSirve>¿Para qué sirve?</a>
-        <a class="dropdown-item" href=Encuesta1.php>Comenzar</a>
+        <a class="dropdown-item" href=Encuesta1.php>Comenzar Test</a>
       </div>
       </li>
       <li class="nav-item dropdown active">
@@ -33,7 +33,7 @@
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href=QuienesSomos.php>¿Quienes somos?</a>
+        <a class="nav-link" href=QuienesSomos.php>Más</a>
       </li>
     </ul>
   </div>

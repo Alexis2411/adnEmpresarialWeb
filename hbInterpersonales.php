@@ -51,7 +51,7 @@ session_start();
                                                 -Consultoría u operación<br>
                                                 -Escucha</p>
                         </div>
-                        <div class="card-footer"><a class="btn btn-primary btn-sm" href="EncuestaSolAnaCrea.php">Empezar</a>
+                        <div class="card-footer"><a class="btn btn-primary btn-sm" href="EncuestaApoyo.php">Empezar</a>
                         </div>
                     </div>
                 </div>
@@ -63,7 +63,7 @@ session_start();
                                                 -Ejercer influencia<br>
                                                 -Incrementar Autoridad</p>
                         </div>
-                        <div class="card-footer"><a class="btn btn-primary btn-sm" href="EncuestaEstres.php">Comenzar</a>
+                        <div class="card-footer"><a class="btn btn-primary btn-sm" href="EncuestaPoderInlfuencia.php">Comenzar</a>
                         </div>
                     </div>
                 </div>
@@ -77,7 +77,7 @@ session_start();
                                                 -Creación de un entorno motivador<br>
                                                 -Recompensa de logros</p>
                         </div>
-                        <div class="card-footer"><a class="btn btn-primary btn-sm" href="EncuestaSolAnaCrea.php">Empezar</a>
+                        <div class="card-footer"><a class="btn btn-primary btn-sm" href="EncuestaMotivación.php">Empezar</a>
                         </div>
                     </div>
                 </div>
@@ -89,7 +89,7 @@ session_start();
                                                 -Selección de estrategias<br>
                                                 -Resolución de confrontaciones</p>
                         </div>
-                        <div class="card-footer"><a class="btn btn-primary btn-sm" href="EncuestaSolAnaCrea.php">Empezar</a>
+                        <div class="card-footer"><a class="btn btn-primary btn-sm" href="EncuestaConInt.php">Empezar</a>
                         </div>
                     </div>
                 </div>

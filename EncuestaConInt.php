@@ -76,7 +76,7 @@ include "includes/function/session.php";
 
         <div class="col-md-6">
                 <div class="row">
-                    <div class="col-md-4 d-flex " style="max-width: 100% ; width: 100%">
+                    <div class="col-md-12 d-flex " style="max-width: 100% ; width: 100%">
             <!-- Contenido 4 columnas -->
                     <?php
                     include "includes/function/funciones.php";
@@ -86,10 +86,8 @@ include "includes/function/session.php";
                             foreach ($seccion as $row) {
                                 ?>
                                 <div class="card" style="margin: 2px">
-                                    <img class="card-img-top image-responsive" src="<?php echo $row["imagen"] ?>" alt="Card image cap" max-width="100%" width="80%">
                                     <div class="card-body">
                                         <h5 class="text-center font-weight-bold" style="font-size: 1rem; width: fit-content">
-                                            <?php echo $row["nombre"]; ?>
                                         </h5>
                                         <?php
                                         if ($row["completo"] == 1) {
@@ -108,12 +106,193 @@ include "includes/function/session.php";
                                                 $puntajeTotal = "error";
                                             }
                                             ?>
-                                            <p class="text-center" style="font-size: 1rem; width: fit-content; margin: 0;">PUNTAJE: <?php echo $puntaje/2; ?> / <?php echo $puntajeTotal/2; ?> </p>
-                                            <p class="text-center" style="font-size: 1rem; width: fit-content; margin: 0;"><strong> CONCLUIDO </strong></p>
+                                            <div class="card-body">
+                    <div id="accordion">
+                        <!-- we are adding the .class so bootstrap.js collapse plugin detects it -->
+                        <div class="col-md-41">
+                            <div class="card card-default" style="background:#b3e5fc;">
+                                <div class="card-header">
+                                    <a class="card-title text-dark" data-toggle="collapse" data-target="#collapseOne" aria-expanded="True" aria-controls="collapseOne" data-parent="#accordion" href="#collapseOne">
+                                    <strong><i class="fas fa-plus-circle text-dark"></i> Diagnostico </strong> 
+                                    </a>
+                                    <h3>
+                                        <?php
+                                        $complete = scoreSeccion(29);
+                                        $result1 = $complete -> fetch_assoc();
+                                            if($result1["total"] < 1){
+                                                $result1["total"] = 0;
+                                            }
+                                        ?>
+
+                                        <span class="badge
+                                        <?php
+                                            if($result1["total"]/2 <= 104){
+                                                echo $noPassed;
+                                            }elseif ($result1["total"]/2 > 104 && $result1["total"]/2 < 122){
+                                                echo $mediumPassed;
+                                            }elseif ($result1["total"]/2 <= 122){
+                                                echo $passed;
+                                            }
+                                        ?>
+                                        float-right">
+
+                                            <?php echo $result1["total"]/2; ?>
+                                             / 144
+                                        </span>
+
+
+                                    </h3>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in" aria-labelledby="headingOne" data-parent="#accordion">
+                                    <div class="card-body">
+                                    <table class="table table-striped table-light">
+                                        <thead class="table-dark text-center">
+                                          <tr>
+                                              <th scope="col">BLOQUE</th>
+                                              <th scope="col" class="bg-danger">Cuartil Inferior</th>
+                                              <th scope="col" class="bg-warning">Media</th>
+                                              <th scope="col" class="bg-success">Cuartil Superior</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <?php
+                                              $bloque = bloqueScore($_SESSION['usuario'], 54);
+                                              $p1 = $bloque -> fetch_assoc();
+                                              ?>
+                                                  <tr>
+                                                    <td>
+                                                        Iniciar una queja
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <?php
+                                                        $valor = ($p1["valor"] < 1 ? '0' :  $p1["valor"]);
+                                                        if ( $valor/2 <= 35){
+                                                            echo '&#9679;';
+                                                        }
+                                                        ?>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <?php
+                                                        $valor = $p1["valor"] < 1 ? '0' :  $p1["valor"];
+                                                        if ( $valor/2 > 35 && $valor/2 < 41){
+                                                            echo '&#9679;';
+                                                        }
+                                                        ?>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <?php
+                                                        $valor = $p1["valor"] < 1 ? '0' :  $p1["valor"];
+                                                        if ( $valor/2 >= 41){
+                                                            echo '&#9679;';
+                                                        }
+                                                        ?>
+                                                    </td>
+                                                  </tr>
+                                          <?php
+                                          $bloque = bloqueScore($_SESSION['usuario'], 55);
+                                          $p2 = $bloque -> fetch_assoc();
+                                          ?>
+                                            <tr>
+                                                <td>Reponder a una crítica</td>
+                                                <td class="text-center">
+                                                    <?php
+                                                    $valor = $p2["valor"] < 1 ? '0' :  $p2["valor"];
+                                                    if ( $valor/2 <= 35){
+                                                        echo '&#9679;';
+                                                    }
+                                                    ?>
+                                                </td>
+                                                <td class="text-center">
+                                                    <?php
+                                                    $valor = $p2["valor"] < 1 ? '0' :  $p2["valor"];
+                                                    if ( $valor/2 > 35 && $valor/2 < 41){
+                                                        echo '&#9679;';
+                                                    }
+                                                    ?>
+                                                </td>
+                                                <td class="text-center">
+                                                    <?php
+                                                    $valor = $p2["valor"] < 1 ? '0' :  $p2["valor"];
+                                                    if ( $valor/2 > 41){
+                                                        echo '&#9679;';
+                                                    }
+                                                    ?>
+                                                </td>
+                                            </tr>
+
+                                          <?php
+                                          $bloque = bloqueScore($_SESSION['usuario'], 56);
+                                          $p3 = $bloque -> fetch_assoc();
+                                          ?>
+                                            <tr>
+                                                <td>
+                                                    Mediar un conflicto
+                                                </td>
+                                                <td class="text-center">
+                                                    <?php
+                                                    $valor = $p3["valor"] < 1 ? '0' :  $p3["valor"];
+                                                    if ( $valor/2 <= 35){
+                                                        echo '&#9679;';
+                                                    }
+                                                    ?>
+                                                </td>
+                                                <td class="text-center">
+                                                    <?php
+                                                    $valor = $p3["valor"] < 1 ? '0' :  $p3["valor"];
+                                                    if ( $valor/2 > 35 && $valor/2 <= 41){
+                                                        echo '&#9679;';
+                                                    }
+                                                    ?>
+                                                </td>
+                                                <td class="text-center">
+                                                    <?php
+                                                    $valor = $p3["valor"] < 1 ? '0' :  $p3["valor"];
+                                                    if ( $valor/2 > 41){
+                                                        echo '&#9679;';
+                                                    }
+                                                    ?>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    <div class="col-md-41">
+                        <?php
+                            $total = $result1["total"]/2;
+                        ?>
+                      <div class="card card-default
+                      <?php
+                        if($total <= 104){
+                            echo $noPassed;
+                        }else if($total > 104 && $total < 122){
+                            echo $mediumPassed;
+                        }else if($total >= 122){
+                            echo $passed;
+                        }
+
+                      ?>
+
+                        ">
+                        <div class="card-header text-light text-center">
+                          <h1>
+                              <strong><i class="fas fa-award"></i>  PUNTUACIÓN TOTAL:
+                                  <?php
+                                    echo $total;?> / 144
+                              </strong>
+                          </h1>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
                                             <?php
                                         }else {
                                             ?>
-                                            <a class="btn btn-info" style="font-size: 1rem; width: fit-content; margin: 0;" href="PreguntasSeccionseis.php?ques=<?php echo $row["nombre"]; ?>">Empezar</a>
+                                            <a class="btn btn-info" style="font-size: 9rem; width: fit-content; margin: 0;" href="PreguntasSeccionseis.php?ques=<?php echo $row["nombre"]; ?>">Empezar</a>
                                             <?php
                                         }
                                         ?>
