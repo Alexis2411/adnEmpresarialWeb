@@ -113,7 +113,7 @@ include "includes/function/session.php";
                                             <?php
                                         }else {
                                             ?>
-                                            <a class="btn btn-info" style="font-size: 1rem; width: fit-content; margin: 0;" href="PreguntasSeccionsiete.php?ques=<?php echo $row["nombre"]; ?>">Empezar</a>
+                                            <a class="btn btn-info mx-auto" style="font-size: 3rem; width: fit-content; margin-top: 2rem;" href="PreguntasSeccionsiete.php?ques=<?php echo $row["nombre"]; ?>">Empezar</a>
                                             <?php
                                         }
                                         ?>
@@ -137,7 +137,7 @@ include "includes/function/session.php";
                                         <h5 class="card-title text-center font-weight-bold" > <?php echo romano($row["id_seccion"]); ?>.
                                             <?php echo $row["nombre"]; ?></h5>
 
-                                        <a class="btn btn-info" href="InvitedSeccion.php?ques=<?php echo $row["nombre"]; ?>">Empezar</a>
+                                        <a class="btn btn-info mx-auto" href="InvitedSeccion.php?ques=<?php echo $row["nombre"]; ?>">Empezar</a>
 
                                     </div>
                                 </div>
