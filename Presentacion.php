@@ -38,7 +38,7 @@ session_start();
                 Habiendo ya contabilizado y ponderado cada ítem y las cuatro secciones, se tendrá un total por cada área del proceso administrativo, teniendo un máximo puntaje por sección se puede asignar un semáforo de atención. En el caso de Planeación, siendo el máximo 450 puntos que representa el 100% de puntaje, dividido en tres partes proporcionales nos dan 150 puntos como mínimo (rojo) 300 (regular) y 450 (bien), estableciendo en una escala sería: (0-150 puntos)=Rojo (atención urgente)  de (151-300 puntos)=Amarillo (atención mediata) de (301-45 puntos)=Verde (atención a mediano plazo).
                 <br><br>
                 <b>Estableciendo:</b> <br>
-                <table class="table shadow table-striped text-center" style="margin: 30px 65px 30px;">
+                <table class="table-responsive shadow table-striped text-center" style="margin: 30px 65px 30px;">
                     <tr>
                         <th>Sección</th>
                         <th>Total de puntos</th>
@@ -90,7 +90,7 @@ session_start();
                 </table>
                 <hr>
 
-                <table class="table shadow table-striped text-center" style="margin: 30px 65px 30px;">
+                <table class="table-responsive shadow table-striped text-center" style="margin: 30px 65px 30px;">
                     <tr>
                         <th>Sección</th>
                         <th>Bloque</th>
