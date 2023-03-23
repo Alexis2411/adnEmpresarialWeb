@@ -137,7 +137,7 @@ include "includes/function/session.php";
                                         <h5 class="card-title text-center font-weight-bold" > <?php echo romano($row["id_seccion"]); ?>.
                                             <?php echo $row["nombre"]; ?></h5>
 
-                                        <a class="btn btn-info" href="InvitedSeccion.php?ques=<?php echo $row["nombre"]; ?>">Empezar</a>
+                                        <a class="btn btn-info mx-auto" href="InvitedSeccion.php?ques=<?php echo $row["nombre"]; ?>">Empezar</a>
 
                                     </div>
                                 </div>
