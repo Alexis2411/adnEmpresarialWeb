@@ -136,6 +136,20 @@ function scoreSeccion($id)
     }
 }
 
+function myScore($id){
+    include 'conexion.php';
+    if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    }
+    try {
+        return $con->query("SELECT fecha, resultado FROM resultado WHERE id_seccion = {$id} AND id_usuario={$_SESSION["usuario"]}");
+    } catch (Exception $e) {
+        echo "Error!!" . $e->getMessage() . "<br>";
+        return false;
+    }
+    }
+
 function romano($numero)
 {
 
