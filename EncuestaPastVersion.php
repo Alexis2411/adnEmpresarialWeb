@@ -101,7 +101,7 @@ include "includes/function/session.php";
                     <?php
                                     }else {
                                         ?>
-                    <a class="btn btn-info" href="PreguntasSeccion.php?ques=<?php echo $row["nombre"]; ?>">Empezar</a>
+                    <a class="btn btn-info mx-auto" href="PreguntasSeccion.php?ques=<?php echo $row["nombre"]; ?>">Empezar</a>
                     <?php
                                     }
                                 ?>
@@ -125,7 +125,7 @@ include "includes/function/session.php";
                     <h5 class="card-title text-center font-weight-bold"> <?php echo romano($row["id_seccion"]); ?>.
                         <?php echo $row["nombre"]; ?></h5>
 
-                    <a class="btn btn-info" href="InvitedSeccion.php?ques=<?php echo $row["nombre"]; ?>">Empezar</a>
+                    <a class="btn btn-info mx-auto" href="InvitedSeccion.php?ques=<?php echo $row["nombre"]; ?>">Empezar</a>
 
                 </div>
             </div>

@@ -348,8 +348,12 @@ include "includes/function/session.php";
                                             <?php
                                         } else {
                                             ?>
+<<<<<<< HEAD
                                             <a class="btn btn-info" style="font-size: 9rem; width: fit-content; margin: 0;"
                                                 href="PreguntasSeccion.php?ques=<?php echo $row["nombre"]; ?>">Empezar</a>
+=======
+                                            <a class="btn btn-info mx-auto" style="font-size: 3rem; width: fit-content; margin-top: 2rem;" href="PreguntasSeccion.php?ques=<?php echo $row["nombre"]; ?>">Empezar</a>
+>>>>>>> 1966514930a46b85daa5a348d14eb0739120b0dd
                                             <?php
                                         }
                                         ?>
@@ -375,8 +379,12 @@ include "includes/function/session.php";
                                             <?php echo $row["nombre"]; ?>
                                         </h5>
 
+<<<<<<< HEAD
                                         <a class="btn btn-info"
                                             href="InvitedSeccion.php?ques=<?php echo $row["nombre"]; ?>">Empezar</a>
+=======
+                                        <a class="btn btn-info mx-auto" href="InvitedSeccion.php?ques=<?php echo $row["nombre"]; ?>">Empezar</a>
+>>>>>>> 1966514930a46b85daa5a348d14eb0739120b0dd
 
                                     </div>
                                 </div>
@@ -413,5 +421,9 @@ include "includes/function/session.php";
     </footer>
     <!-- Pie de pagina -->
 </body>
+<<<<<<< HEAD
 
 </html>
+=======
+</html>
+>>>>>>> 1966514930a46b85daa5a348d14eb0739120b0dd
