@@ -113,7 +113,7 @@ include "includes/function/session.php";
                                             <?php
                                         }else {
                                             ?>
-                                            <a class="btn btn-info" style="font-size: 1rem; width: fit-content; margin: 0;" href="PreguntasSeccionseis.php?ques=<?php echo $row["nombre"]; ?>">Empezar</a>
+                                            <a class="btn btn-info mx-auto" style="font-size: 3rem; width: fit-content; margin-top: 2rem;" href="PreguntasSeccionseis.php?ques=<?php echo $row["nombre"]; ?>">Empezar</a>
                                             <?php
                                         }
                                         ?>
