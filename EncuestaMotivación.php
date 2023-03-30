@@ -75,11 +75,45 @@ include "includes/function/session.php";
         </div>
 
         <div class="col-md-6">
+        <?php
+            include "includes/function/funciones.php";
+            $passed = "badge-success";
+            $mediumPassed = "badge-warning";
+            $noPassed = "badge-danger";
+            $resultado = myScore(28);
+
+            if (mysqli_num_rows($resultado) > 1) {
+                ?>
+
+                <div class="container mt-5">
+                    <h2>Tabla de Resultados</h2>
+                    <table class="table table-striped table-bordered">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Fecha</th>
+                                <th>Resultado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                            $resultado = myScore(28);
+
+                            // Mostrar los resultados en una tabla
+                            while ($fila = mysqli_fetch_assoc($resultado)) {
+                                echo "<tr><td>" . $fila["fecha"] . "</td><td>" . $fila["resultado"] / 2 . "</td></tr>";
+                            }
+                            ?>
+                        </tbody>
+                    </table>
+                </div>
+
+                <?php
+            }
+            ?>
                 <div class="row">
                     <div class="col-md-12 d-flex " style="max-width: 100% ; width: 100%">
             <!-- Contenido 4 columnas -->
                     <?php
-                    include "includes/function/funciones.php";
                     if (isset($_SESSION['usuario'])) {
                         $seccion = obtSeccion(28, 28);
                         if ($seccion) {
@@ -191,7 +225,7 @@ include "includes/function/session.php";
 
                                                     <?php
                                                     $bloque = bloqueScore($_SESSION['usuario'], 48);
-                                                    $p1 = $bloque->fetch_assoc();
+                                                    $p2 = $bloque->fetch_assoc();
                                                     ?>
                                                     <tr>
                                                         <td>
@@ -199,7 +233,7 @@ include "includes/function/session.php";
                                                         </td>
                                                         <td class="text-center">
                                                             <?php
-                                                            $valor = ($p1["valor"] < 1 ? '0' :  $p1["valor"]);
+                                                            $valor = ($p2["valor"] < 1 ? '0' :  $p2["valor"]);
                                                             if ($valor / 2 <= 8) {
                                                                 echo '&#9679;';
                                                             }
@@ -207,7 +241,7 @@ include "includes/function/session.php";
                                                         </td>
                                                         <td class="text-center">
                                                             <?php
-                                                            $valor = $p1["valor"] < 1 ? '0' :  $p1["valor"];
+                                                            $valor = $p2["valor"] < 1 ? '0' :  $p2["valor"];
                                                             if ($valor / 2 > 8 && $valor / 2 < 10) {
                                                                 echo '&#9679;';
                                                             }
@@ -215,7 +249,7 @@ include "includes/function/session.php";
                                                         </td>
                                                         <td class="text-center">
                                                             <?php
-                                                            $valor = $p1["valor"] < 1 ? '0' :  $p1["valor"];
+                                                            $valor = $p2["valor"] < 1 ? '0' :  $p2["valor"];
                                                             if ($valor / 2 >= 10) {
                                                                 echo '&#9679;';
                                                             }
@@ -224,7 +258,7 @@ include "includes/function/session.php";
                                                     </tr>
                                                     <?php
                                                     $bloque = bloqueScore($_SESSION['usuario'], 49);
-                                                    $p1 = $bloque->fetch_assoc();
+                                                    $p3 = $bloque->fetch_assoc();
                                                     ?>
                                                     <tr>
                                                         <td>
@@ -232,7 +266,7 @@ include "includes/function/session.php";
                                                         </td>
                                                         <td class="text-center">
                                                             <?php
-                                                            $valor = ($p1["valor"] < 1 ? '0' :  $p1["valor"]);
+                                                            $valor = ($p3["valor"] < 1 ? '0' :  $p3["valor"]);
                                                             if ($valor / 2 <= 13) {
                                                                 echo '&#9679;';
                                                             }
@@ -240,7 +274,7 @@ include "includes/function/session.php";
                                                         </td>
                                                         <td class="text-center">
                                                             <?php
-                                                            $valor = $p1["valor"] < 1 ? '0' :  $p1["valor"];
+                                                            $valor = $p3["valor"] < 1 ? '0' :  $p3["valor"];
                                                             if ($valor / 2 > 13 && $valor / 2 < 16) {
                                                                 echo '&#9679;';
                                                             }
@@ -248,7 +282,7 @@ include "includes/function/session.php";
                                                         </td>
                                                         <td class="text-center">
                                                             <?php
-                                                            $valor = $p1["valor"] < 1 ? '0' :  $p1["valor"];
+                                                            $valor = $p3["valor"] < 1 ? '0' :  $p3["valor"];
                                                             if ($valor / 2 >= 16) {
                                                                 echo '&#9679;';
                                                             }
@@ -257,7 +291,7 @@ include "includes/function/session.php";
                                                     </tr>
                                                     <?php
                                                     $bloque = bloqueScore($_SESSION['usuario'], 50);
-                                                    $p1 = $bloque->fetch_assoc();
+                                                    $p4 = $bloque->fetch_assoc();
                                                     ?>
                                                     <tr>
                                                         <td>
@@ -265,7 +299,7 @@ include "includes/function/session.php";
                                                         </td>
                                                         <td class="text-center">
                                                             <?php
-                                                            $valor = ($p1["valor"] < 1 ? '0' :  $p1["valor"]);
+                                                            $valor = ($p4["valor"] < 1 ? '0' :  $p4["valor"]);
                                                             if ($valor / 2 <= 18) {
                                                                 echo '&#9679;';
                                                             }
@@ -273,7 +307,7 @@ include "includes/function/session.php";
                                                         </td>
                                                         <td class="text-center">
                                                             <?php
-                                                            $valor = $p1["valor"] < 1 ? '0' :  $p1["valor"];
+                                                            $valor = $p4["valor"] < 1 ? '0' :  $p4["valor"];
                                                             if ($valor / 2 > 18 && $valor / 2 < 21) {
                                                                 echo '&#9679;';
                                                             }
@@ -281,7 +315,7 @@ include "includes/function/session.php";
                                                         </td>
                                                         <td class="text-center">
                                                             <?php
-                                                            $valor = $p1["valor"] < 1 ? '0' :  $p1["valor"];
+                                                            $valor = $p4["valor"] < 1 ? '0' :  $p4["valor"];
                                                             if ($valor / 2 >= 21) {
                                                                 echo '&#9679;';
                                                             }
@@ -290,7 +324,7 @@ include "includes/function/session.php";
                                                     </tr>
                                                     <?php
                                                     $bloque = bloqueScore($_SESSION['usuario'], 51);
-                                                    $p1 = $bloque->fetch_assoc();
+                                                    $p5 = $bloque->fetch_assoc();
                                                     ?>
                                                     <tr>
                                                         <td>
@@ -298,7 +332,7 @@ include "includes/function/session.php";
                                                         </td>
                                                         <td class="text-center">
                                                             <?php
-                                                            $valor = ($p1["valor"] < 1 ? '0' :  $p1["valor"]);
+                                                            $valor = ($p5["valor"] < 1 ? '0' :  $p5["valor"]);
                                                             if ($valor / 2 <= 18) {
                                                                 echo '&#9679;';
                                                             }
@@ -306,7 +340,7 @@ include "includes/function/session.php";
                                                         </td>
                                                         <td class="text-center">
                                                             <?php
-                                                            $valor = $p1["valor"] < 1 ? '0' :  $p1["valor"];
+                                                            $valor = $p5["valor"] < 1 ? '0' :  $p5["valor"];
                                                             if ($valor / 2 > 18 && $valor / 2 < 21) {
                                                                 echo '&#9679;';
                                                             }
@@ -314,7 +348,7 @@ include "includes/function/session.php";
                                                         </td>
                                                         <td class="text-center">
                                                             <?php
-                                                            $valor = $p1["valor"] < 1 ? '0' :  $p1["valor"];
+                                                            $valor = $p5["valor"] < 1 ? '0' :  $p5["valor"];
                                                             if ($valor / 2 >= 21) {
                                                                 echo '&#9679;';
                                                             }
@@ -323,7 +357,7 @@ include "includes/function/session.php";
                                                     </tr>
                                                     <?php
                                                     $bloque = bloqueScore($_SESSION['usuario'], 52);
-                                                    $p1 = $bloque->fetch_assoc();
+                                                    $p6 = $bloque->fetch_assoc();
                                                     ?>
                                                     <tr>
                                                         <td>
@@ -331,7 +365,7 @@ include "includes/function/session.php";
                                                         </td>
                                                         <td class="text-center">
                                                             <?php
-                                                            $valor = ($p1["valor"] < 1 ? '0' :  $p1["valor"]);
+                                                            $valor = ($p6["valor"] < 1 ? '0' :  $p6["valor"]);
                                                             if ($valor / 2 <= 8) {
                                                                 echo '&#9679;';
                                                             }
@@ -339,7 +373,7 @@ include "includes/function/session.php";
                                                         </td>
                                                         <td class="text-center">
                                                             <?php
-                                                            $valor = $p1["valor"] < 1 ? '0' :  $p1["valor"];
+                                                            $valor = $p6["valor"] < 1 ? '0' :  $p6["valor"];
                                                             if ($valor / 2 > 8 && $valor / 2 < 10) {
                                                                 echo '&#9679;';
                                                             }
@@ -347,7 +381,7 @@ include "includes/function/session.php";
                                                         </td>
                                                         <td class="text-center">
                                                             <?php
-                                                            $valor = $p1["valor"] < 1 ? '0' :  $p1["valor"];
+                                                            $valor = $p6["valor"] < 1 ? '0' :  $p6["valor"];
                                                             if ($valor / 2 >= 10) {
                                                                 echo '&#9679;';
                                                             }
@@ -356,7 +390,7 @@ include "includes/function/session.php";
                                                     </tr>
                                                     <?php
                                                     $bloque = bloqueScore($_SESSION['usuario'], 53);
-                                                    $p1 = $bloque->fetch_assoc();
+                                                    $p7 = $bloque->fetch_assoc();
                                                     ?>
                                                     <tr>
                                                         <td>
@@ -364,7 +398,7 @@ include "includes/function/session.php";
                                                         </td>
                                                         <td class="text-center">
                                                             <?php
-                                                            $valor = ($p1["valor"] < 1 ? '0' :  $p1["valor"]);
+                                                            $valor = ($p7["valor"] < 1 ? '0' :  $p7["valor"]);
                                                             if ($valor / 2 <= 13) {
                                                                 echo '&#9679;';
                                                             }
@@ -372,7 +406,7 @@ include "includes/function/session.php";
                                                         </td>
                                                         <td class="text-center">
                                                             <?php
-                                                            $valor = $p1["valor"] < 1 ? '0' :  $p1["valor"];
+                                                            $valor = $p7["valor"] < 1 ? '0' :  $p7["valor"];
                                                             if ($valor / 2 > 13 && $valor / 2 < 16) {
                                                                 echo '&#9679;';
                                                             }
@@ -380,7 +414,7 @@ include "includes/function/session.php";
                                                         </td>
                                                         <td class="text-center">
                                                             <?php
-                                                            $valor = $p1["valor"] < 1 ? '0' :  $p1["valor"];
+                                                            $valor = $p7["valor"] < 1 ? '0' :  $p7["valor"];
                                                             if ($valor / 2 >= 16) {
                                                                 echo '&#9679;';
                                                             }
@@ -419,6 +453,11 @@ include "includes/function/session.php";
                                         </h1>
                                     </div>
                                 </div>
+                                <div class="card-header text-light text-center">
+                                                                <a class="btn btn-info"
+                                                                    style="font-size: 6rem; width: fit-content; margin: 0;"
+                                                                    href="PreguntasSeccionseis.php?ques=<?php echo $row["nombre"]; ?>">Reintentar</a>
+                                                        </div>
                             </div>
                         </div>
                     </div>

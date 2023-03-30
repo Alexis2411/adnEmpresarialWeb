@@ -14,9 +14,6 @@ date_default_timezone_set('America/Mexico_City');
         $tPreguntas = $ide['total'];
         $completo = $ide['completo'];
       }
-      if ($completo == 1) {
-        header("location: MenuEncuestas.php");
-      }
       $idu = $_SESSION["usuario"];
     }else {
       header("location: MenuEncuestas.php");

@@ -199,15 +199,29 @@ if (isset($_POST["end"]) && $_POST["end"] === "end") {
                             );
                         }
                     }else {
-                        $res = array(
-                            "type" => "success",
-                            "title"=>"FINALIZADO CORRECTAMENTE",
-                            "text" =>"LA ENCUESTA YA HA SIDO FINALIZADA",
-                            "href"=>"UsuarioInicio.php"
-                        );
+                        $stmt->prepare("DELETE FROM `estado-seccion` WHERE id_usuario=? AND id_seccion=?");        
+                        $stmt->bind_param("ii",$_SESSION["usuario"],$_SESSION["seccion"]);
+                        $stmt->execute();
+                        $concluido = 1;
+                        $stmt->prepare("INSERT INTO `estado-seccion`(id_usuario,id_seccion,completo) VALUES(?,?,?)");
+                        $stmt->bind_param("iii",$_SESSION["usuario"],$_SESSION["seccion"],$concluido);
+                        $stmt->execute();
+                        if($stmt->affected_rows){
+                            $res = array(
+                                "type" => "success",
+                                "title"=>"FINALIZADO CORRECTAMENTE",
+                                "text" =>"HA CONCLUIDO LA ENCUESTA CORRECTAMENTE",
+                                "href"=>"UsuarioInicio.php" 
+                            );
+                        }else {
+                            $res = array(
+                                "type" => "error",
+                                "title"=>"Internal Error",
+                                "text" =>"Internal Error 405"
+                            );
+                        }
+                    
                     }
-                    
-                    
                 }else {
                     $res = array(
                         "type" => "error",

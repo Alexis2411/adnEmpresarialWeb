@@ -15,9 +15,6 @@ date_default_timezone_set('America/Mexico_City');
        // $romano = romano($ide['id_seccion']);
         $completo = $ide['completo'];
       }
-      if ($completo == 1) {
-        header("location: MenuEncuestas.php");
-      }
       $idu = $_SESSION["usuario"];
     }else {
       header("location: MenuEncuestas.php");

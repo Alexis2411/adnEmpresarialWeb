@@ -1,4 +1,6 @@
 <?php
+session_start();
+$_SESSION['archivo'] = 'EncuestaSolAnaCrea.php';
 date_default_timezone_set('America/Mexico_City');
 include "includes/function/session.php";
 ?>
@@ -76,11 +78,45 @@ include "includes/function/session.php";
         </div>
 
         <div class="col-md-6">
+            <?php
+            include "includes/function/funciones.php";
+            $passed = "badge-success";
+            $mediumPassed = "badge-warning";
+            $noPassed = "badge-danger";
+            $resultado = myScore(11);
+
+            if (mysqli_num_rows($resultado) > 0) {
+                ?>
+
+                <div class="container mt-5">
+                    <h2>Tabla de Resultados</h2>
+                    <table class="table table-striped table-bordered">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Fecha</th>
+                                <th>Resultado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                            $resultado = myScore(11);
+
+                            // Mostrar los resultados en una tabla
+                            while ($fila = mysqli_fetch_assoc($resultado)) {
+                                echo "<tr><td>" . $fila["fecha"] . "</td><td>" . $fila["resultado"] / 2 . "</td></tr>";
+                            }
+                            ?>
+                        </tbody>
+                    </table>
+                </div>
+
+                <?php
+            }
+            ?>
                 <div class="row">
                     <div class="col-md-12 d-flex " style="max-width: 100% ; width: 100%">
             <!-- Contenido 4 columnas -->
                     <?php
-                    include "includes/function/funciones.php";
                     if (isset($_SESSION['usuario'])) {
                         $seccion = obtSeccion(11, 11);
                         if ($seccion) {
@@ -288,6 +324,13 @@ include "includes/function/session.php";
                           </h1>
                         </div>
                       </div>
+                       <div>
+                                                        <div class="card-header text-light text-center">
+                                                                <a class="btn btn-info"
+                                                                    style="font-size: 6rem; width: fit-content; margin: 0;"
+                                                                    href="PreguntasSeccionseis.php?ques=<?php echo $row["nombre"]; ?>">Reintentar</a>
+                                                        </div>
+                                                        </div>
                     </div>
                 </div>
             </div>

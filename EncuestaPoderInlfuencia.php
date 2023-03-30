@@ -78,11 +78,45 @@ Este instrumento está diseñado para ayudarlo a descubrir su nivel de competenc
         </div>
 
         <div class="col-md-6">
+            <?php
+            include "includes/function/funciones.php";
+            $passed = "badge-success";
+            $mediumPassed = "badge-warning";
+            $noPassed = "badge-danger";
+            $resultado = myScore(14);
+
+            if (mysqli_num_rows($resultado) > 0) {
+                ?>
+
+                <div class="container mt-5">
+                    <h2>Tabla de Resultados</h2>
+                    <table class="table table-striped table-bordered">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Fecha</th>
+                                <th>Resultado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                            $resultado = myScore(14);
+
+                            // Mostrar los resultados en una tabla
+                            while ($fila = mysqli_fetch_assoc($resultado)) {
+                                echo "<tr><td>" . $fila["fecha"] . "</td><td>" . $fila["resultado"] / 2 . "</td></tr>";
+                            }
+                            ?>
+                        </tbody>
+                    </table>
+                </div>
+
+                <?php
+            }
+            ?>
                 <div class="row">
                     <div class="col-md-12 d-flex " style="max-width: 100% ; width: 100%">
             <!-- Contenido 4 columnas -->
                     <?php
-                    include "includes/function/funciones.php";
                     if (isset($_SESSION['usuario'])) {
                         $seccion = obtSeccion(14, 14);
                         if ($seccion) {
@@ -200,7 +234,7 @@ Este instrumento está diseñado para ayudarlo a descubrir su nivel de competenc
                                                         <td>Atractivo interpersonal</td>
                                                         <td class="text-center">
                                                             <?php
-                                                            $valor = ($p1["valor"] < 1 ? '0' :  $p1["valor"]);
+                                                            $valor = ($p2["valor"] < 1 ? '0' :  $p2["valor"]);
                                                             if ($valor / 2 <= 9) {
                                                                 echo '&#9679;';
                                                             }
@@ -208,7 +242,7 @@ Este instrumento está diseñado para ayudarlo a descubrir su nivel de competenc
                                                         </td>
                                                         <td class="text-center">
                                                             <?php
-                                                            $valor = $p1["valor"] < 1 ? '0' :  $p1["valor"];
+                                                            $valor = $p2["valor"] < 1 ? '0' :  $p2["valor"];
                                                             if ($valor / 2 > 9 && $valor / 2 < 10) {
                                                                 echo '&#9679;';
                                                             }
@@ -216,7 +250,7 @@ Este instrumento está diseñado para ayudarlo a descubrir su nivel de competenc
                                                         </td>
                                                         <td class="text-center">
                                                             <?php
-                                                            $valor = $p1["valor"] < 1 ? '0' :  $p1["valor"];
+                                                            $valor = $p2["valor"] < 1 ? '0' :  $p2["valor"];
                                                             if ($valor / 2 >= 10) {
                                                                 echo '&#9679;';
                                                             }
@@ -225,13 +259,13 @@ Este instrumento está diseñado para ayudarlo a descubrir su nivel de competenc
                                                     </tr>
                                                     <?php
                                                     $bloque = bloqueScore($_SESSION['usuario'], 35);
-                                                    $p2 = $bloque->fetch_assoc();
+                                                    $p3 = $bloque->fetch_assoc();
                                                     ?>
                                                     <tr>
                                                         <td>Esfuerzo</td>
                                                         <td class="text-center">
                                                             <?php
-                                                            $valor = ($p1["valor"] < 1 ? '0' :  $p1["valor"]);
+                                                            $valor = ($p3["valor"] < 1 ? '0' :  $p3["valor"]);
                                                             if ($valor / 2 <= 9) {
                                                                 echo '&#9679;';
                                                             }
@@ -239,7 +273,7 @@ Este instrumento está diseñado para ayudarlo a descubrir su nivel de competenc
                                                         </td>
                                                         <td class="text-center">
                                                             <?php
-                                                            $valor = $p1["valor"] < 1 ? '0' :  $p1["valor"];
+                                                            $valor = $p3["valor"] < 1 ? '0' :  $p3["valor"];
                                                             if ($valor / 2 > 9 && $valor / 2 < 10) {
                                                                 echo '&#9679;';
                                                             }
@@ -247,7 +281,7 @@ Este instrumento está diseñado para ayudarlo a descubrir su nivel de competenc
                                                         </td>
                                                         <td class="text-center">
                                                             <?php
-                                                            $valor = $p1["valor"] < 1 ? '0' :  $p1["valor"];
+                                                            $valor = $p3["valor"] < 1 ? '0' :  $p3["valor"];
                                                             if ($valor / 2 >= 10) {
                                                                 echo '&#9679;';
                                                             }
@@ -256,13 +290,13 @@ Este instrumento está diseñado para ayudarlo a descubrir su nivel de competenc
                                                     </tr>
                                                     <?php
                                                     $bloque = bloqueScore($_SESSION['usuario'], 36);
-                                                    $p2 = $bloque->fetch_assoc();
+                                                    $p4 = $bloque->fetch_assoc();
                                                     ?>
                                                     <tr>
                                                         <td>Legitimidad</td>
                                                         <td class="text-center">
                                                             <?php
-                                                            $valor = ($p1["valor"] < 1 ? '0' :  $p1["valor"]);
+                                                            $valor = ($p4["valor"] < 1 ? '0' :  $p4["valor"]);
                                                             if ($valor / 2 <= 9) {
                                                                 echo '&#9679;';
                                                             }
@@ -270,7 +304,7 @@ Este instrumento está diseñado para ayudarlo a descubrir su nivel de competenc
                                                         </td>
                                                         <td class="text-center">
                                                             <?php
-                                                            $valor = $p1["valor"] < 1 ? '0' :  $p1["valor"];
+                                                            $valor = $p4["valor"] < 1 ? '0' :  $p4["valor"];
                                                             if ($valor / 2 > 9 && $valor / 2 < 10) {
                                                                 echo '&#9679;';
                                                             }
@@ -278,7 +312,7 @@ Este instrumento está diseñado para ayudarlo a descubrir su nivel de competenc
                                                         </td>
                                                         <td class="text-center">
                                                             <?php
-                                                            $valor = $p1["valor"] < 1 ? '0' :  $p1["valor"];
+                                                            $valor = $p4["valor"] < 1 ? '0' :  $p4["valor"];
                                                             if ($valor / 2 >= 10) {
                                                                 echo '&#9679;';
                                                             }
@@ -287,13 +321,13 @@ Este instrumento está diseñado para ayudarlo a descubrir su nivel de competenc
                                                     </tr>
                                                     <?php
                                                     $bloque = bloqueScore($_SESSION['usuario'], 37);
-                                                    $p2 = $bloque->fetch_assoc();
+                                                    $p5 = $bloque->fetch_assoc();
                                                     ?>
                                                     <tr>
                                                         <td>Centralidad</td>
                                                         <td class="text-center">
                                                             <?php
-                                                            $valor = ($p1["valor"] < 1 ? '0' :  $p1["valor"]);
+                                                            $valor = ($p5["valor"] < 1 ? '0' :  $p5["valor"]);
                                                             if ($valor / 2 <= 9) {
                                                                 echo '&#9679;';
                                                             }
@@ -301,7 +335,7 @@ Este instrumento está diseñado para ayudarlo a descubrir su nivel de competenc
                                                         </td>
                                                         <td class="text-center">
                                                             <?php
-                                                            $valor = $p1["valor"] < 1 ? '0' :  $p1["valor"];
+                                                            $valor = $p5["valor"] < 1 ? '0' :  $p5["valor"];
                                                             if ($valor / 2 > 9 && $valor / 2 < 10) {
                                                                 echo '&#9679;';
                                                             }
@@ -309,7 +343,7 @@ Este instrumento está diseñado para ayudarlo a descubrir su nivel de competenc
                                                         </td>
                                                         <td class="text-center">
                                                             <?php
-                                                            $valor = $p1["valor"] < 1 ? '0' :  $p1["valor"];
+                                                            $valor = $p5["valor"] < 1 ? '0' :  $p5["valor"];
                                                             if ($valor / 2 >= 10) {
                                                                 echo '&#9679;';
                                                             }
@@ -318,13 +352,13 @@ Este instrumento está diseñado para ayudarlo a descubrir su nivel de competenc
                                                     </tr>
                                                     <?php
                                                     $bloque = bloqueScore($_SESSION['usuario'], 38);
-                                                    $p2 = $bloque->fetch_assoc();
+                                                    $p6 = $bloque->fetch_assoc();
                                                     ?>
                                                     <tr>
                                                         <td>Visibilidad</td>
                                                         <td class="text-center">
                                                             <?php
-                                                            $valor = ($p1["valor"] < 1 ? '0' :  $p1["valor"]);
+                                                            $valor = ($p6["valor"] < 1 ? '0' :  $p6["valor"]);
                                                             if ($valor / 2 <= 9) {
                                                                 echo '&#9679;';
                                                             }
@@ -332,7 +366,7 @@ Este instrumento está diseñado para ayudarlo a descubrir su nivel de competenc
                                                         </td>
                                                         <td class="text-center">
                                                             <?php
-                                                            $valor = $p1["valor"] < 1 ? '0' :  $p1["valor"];
+                                                            $valor = $p6["valor"] < 1 ? '0' :  $p6["valor"];
                                                             if ($valor / 2 > 9 && $valor / 2 < 10) {
                                                                 echo '&#9679;';
                                                             }
@@ -340,38 +374,7 @@ Este instrumento está diseñado para ayudarlo a descubrir su nivel de competenc
                                                         </td>
                                                         <td class="text-center">
                                                             <?php
-                                                            $valor = $p1["valor"] < 1 ? '0' :  $p1["valor"];
-                                                            if ($valor / 2 >= 10) {
-                                                                echo '&#9679;';
-                                                            }
-                                                            ?>
-                                                        </td>
-                                                    </tr>
-                                                    <?php
-                                                    $bloque = bloqueScore($_SESSION['usuario'], 38);
-                                                    $p2 = $bloque->fetch_assoc();
-                                                    ?>
-                                                    <tr>
-                                                        <td>Flexibilidad</td>
-                                                        <td class="text-center">
-                                                            <?php
-                                                            $valor = ($p1["valor"] < 1 ? '0' :  $p1["valor"]);
-                                                            if ($valor / 2 <= 9) {
-                                                                echo '&#9679;';
-                                                            }
-                                                            ?>
-                                                        </td>
-                                                        <td class="text-center">
-                                                            <?php
-                                                            $valor = $p1["valor"] < 1 ? '0' :  $p1["valor"];
-                                                            if ($valor / 2 > 9 && $valor / 2 < 10) {
-                                                                echo '&#9679;';
-                                                            }
-                                                            ?>
-                                                        </td>
-                                                        <td class="text-center">
-                                                            <?php
-                                                            $valor = $p1["valor"] < 1 ? '0' :  $p1["valor"];
+                                                            $valor = $p6["valor"] < 1 ? '0' :  $p6["valor"];
                                                             if ($valor / 2 >= 10) {
                                                                 echo '&#9679;';
                                                             }
@@ -380,13 +383,13 @@ Este instrumento está diseñado para ayudarlo a descubrir su nivel de competenc
                                                     </tr>
                                                     <?php
                                                     $bloque = bloqueScore($_SESSION['usuario'], 39);
-                                                    $p2 = $bloque->fetch_assoc();
+                                                    $p7 = $bloque->fetch_assoc();
                                                     ?>
                                                     <tr>
-                                                        <td>Relevancia</td>
+                                                        <td>Flexibilidad</td>
                                                         <td class="text-center">
                                                             <?php
-                                                            $valor = ($p1["valor"] < 1 ? '0' :  $p1["valor"]);
+                                                            $valor = ($p7["valor"] < 1 ? '0' :  $p7["valor"]);
                                                             if ($valor / 2 <= 9) {
                                                                 echo '&#9679;';
                                                             }
@@ -394,7 +397,7 @@ Este instrumento está diseñado para ayudarlo a descubrir su nivel de competenc
                                                         </td>
                                                         <td class="text-center">
                                                             <?php
-                                                            $valor = $p1["valor"] < 1 ? '0' :  $p1["valor"];
+                                                            $valor = $p7["valor"] < 1 ? '0' :  $p7["valor"];
                                                             if ($valor / 2 > 9 && $valor / 2 < 10) {
                                                                 echo '&#9679;';
                                                             }
@@ -402,7 +405,7 @@ Este instrumento está diseñado para ayudarlo a descubrir su nivel de competenc
                                                         </td>
                                                         <td class="text-center">
                                                             <?php
-                                                            $valor = $p1["valor"] < 1 ? '0' :  $p1["valor"];
+                                                            $valor = $p7["valor"] < 1 ? '0' :  $p7["valor"];
                                                             if ($valor / 2 >= 10) {
                                                                 echo '&#9679;';
                                                             }
@@ -411,13 +414,44 @@ Este instrumento está diseñado para ayudarlo a descubrir su nivel de competenc
                                                     </tr>
                                                     <?php
                                                     $bloque = bloqueScore($_SESSION['usuario'], 40);
-                                                    $p2 = $bloque->fetch_assoc();
+                                                    $p8 = $bloque->fetch_assoc();
+                                                    ?>
+                                                    <tr>
+                                                        <td>Relevancia</td>
+                                                        <td class="text-center">
+                                                            <?php
+                                                            $valor = ($p8["valor"] < 1 ? '0' :  $p8["valor"]);
+                                                            if ($valor / 2 <= 9) {
+                                                                echo '&#9679;';
+                                                            }
+                                                            ?>
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <?php
+                                                            $valor = $p8["valor"] < 1 ? '0' :  $p8["valor"];
+                                                            if ($valor / 2 > 9 && $valor / 2 < 10) {
+                                                                echo '&#9679;';
+                                                            }
+                                                            ?>
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <?php
+                                                            $valor = $p8["valor"] < 1 ? '0' :  $p8["valor"];
+                                                            if ($valor / 2 >= 10) {
+                                                                echo '&#9679;';
+                                                            }
+                                                            ?>
+                                                        </td>
+                                                    </tr>
+                                                    <?php
+                                                    $bloque = bloqueScore($_SESSION['usuario'], 41);
+                                                    $p9 = $bloque->fetch_assoc();
                                                     ?>
                                                     <tr>
                                                         <td>Uso de influencia</td>
                                                         <td class="text-center">
                                                             <?php
-                                                            $valor = ($p1["valor"] < 1 ? '0' :  $p1["valor"]);
+                                                            $valor = ($p9["valor"] < 1 ? '0' :  $p9["valor"]);
                                                             if ($valor / 2 <= 22) {
                                                                 echo '&#9679;';
                                                             }
@@ -425,7 +459,7 @@ Este instrumento está diseñado para ayudarlo a descubrir su nivel de competenc
                                                         </td>
                                                         <td class="text-center">
                                                             <?php
-                                                            $valor = $p1["valor"] < 1 ? '0' :  $p1["valor"];
+                                                            $valor = $p9["valor"] < 1 ? '0' :  $p9["valor"];
                                                             if ($valor / 2 > 22 && $valor / 2 < 26) {
                                                                 echo '&#9679;';
                                                             }
@@ -433,21 +467,21 @@ Este instrumento está diseñado para ayudarlo a descubrir su nivel de competenc
                                                         </td>
                                                         <td class="text-center">
                                                             <?php
-                                                            $valor = $p1["valor"] < 1 ? '0' :  $p1["valor"];
+                                                            $valor = $p9["valor"] < 1 ? '0' :  $p9["valor"];
                                                             if ($valor / 2 >= 26) {
                                                                 echo '&#9679;';
                                                             }
                                                             ?>
                                                         </td>
                                                     </tr><?php
-                                                    $bloque = bloqueScore($_SESSION['usuario'], 41);
-                                                    $p2 = $bloque->fetch_assoc();
+                                                    $bloque = bloqueScore($_SESSION['usuario'], 42);
+                                                    $p10 = $bloque->fetch_assoc();
                                                     ?>
                                                     <tr>
                                                         <td>Resistencia a la influencia</td>
                                                         <td class="text-center">
                                                             <?php
-                                                            $valor = ($p1["valor"] < 1 ? '0' :  $p1["valor"]);
+                                                            $valor = ($p10["valor"] < 1 ? '0' :  $p10["valor"]);
                                                             if ($valor / 2 <= 13) {
                                                                 echo '&#9679;';
                                                             }
@@ -455,7 +489,7 @@ Este instrumento está diseñado para ayudarlo a descubrir su nivel de competenc
                                                         </td>
                                                         <td class="text-center">
                                                             <?php
-                                                            $valor = $p1["valor"] < 1 ? '0' :  $p1["valor"];
+                                                            $valor = $p10["valor"] < 1 ? '0' :  $p10["valor"];
                                                             if ($valor / 2 > 13 && $valor / 2 < 16) {
                                                                 echo '&#9679;';
                                                             }
@@ -463,7 +497,7 @@ Este instrumento está diseñado para ayudarlo a descubrir su nivel de competenc
                                                         </td>
                                                         <td class="text-center">
                                                             <?php
-                                                            $valor = $p1["valor"] < 1 ? '0' :  $p1["valor"];
+                                                            $valor = $p10["valor"] < 1 ? '0' :  $p10["valor"];
                                                             if ($valor / 2 >= 16) {
                                                                 echo '&#9679;';
                                                             }
@@ -471,14 +505,14 @@ Este instrumento está diseñado para ayudarlo a descubrir su nivel de competenc
                                                         </td>
                                                     </tr>
                                                     <?php
-                                                    $bloque = bloqueScore($_SESSION['usuario'], 42);
-                                                    $p2 = $bloque->fetch_assoc();
+                                                    $bloque = bloqueScore($_SESSION['usuario'], 43);
+                                                    $p11 = $bloque->fetch_assoc();
                                                     ?>
                                                     <tr>
                                                         <td>Incremento de la autoridad</td>
                                                         <td class="text-center">
                                                             <?php
-                                                            $valor = ($p1["valor"] < 1 ? '0' :  $p1["valor"]);
+                                                            $valor = ($p11["valor"] < 1 ? '0' :  $p11["valor"]);
                                                             if ($valor / 2 <= 18) {
                                                                 echo '&#9679;';
                                                             }
@@ -486,7 +520,7 @@ Este instrumento está diseñado para ayudarlo a descubrir su nivel de competenc
                                                         </td>
                                                         <td class="text-center">
                                                             <?php
-                                                            $valor = $p1["valor"] < 1 ? '0' :  $p1["valor"];
+                                                            $valor = $p11["valor"] < 1 ? '0' :  $p11["valor"];
                                                             if ($valor / 2 > 18 && $valor / 2 < 21) {
                                                                 echo '&#9679;';
                                                             }
@@ -494,7 +528,7 @@ Este instrumento está diseñado para ayudarlo a descubrir su nivel de competenc
                                                         </td>
                                                         <td class="text-center">
                                                             <?php
-                                                            $valor = $p1["valor"] < 1 ? '0' :  $p1["valor"];
+                                                            $valor = $p11["valor"] < 1 ? '0' :  $p11["valor"];
                                                             if ($valor / 2 >= 21) {
                                                                 echo '&#9679;';
                                                             }
@@ -536,6 +570,11 @@ Este instrumento está diseñado para ayudarlo a descubrir su nivel de competenc
                                         </h1>
                                     </div>
                                 </div>
+                                <div class="card-header text-light text-center">
+                                                                <a class="btn btn-info"
+                                                                    style="font-size: 6rem; width: fit-content; margin: 0;"
+                                                                    href="PreguntasSeccionseis.php?ques=<?php echo $row["nombre"]; ?>">Reintentar</a>
+                                                        </div>
                             </div>
                         </div>
                                             

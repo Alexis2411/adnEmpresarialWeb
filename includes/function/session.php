@@ -1,8 +1,8 @@
 <?php
  function authenticatedUser(){
     if(!checkUser()){
-        header('Location: InicioSesion.php');
-        exit();
+      header('Location: InicioSesion.php');
+      exit();
     } 
   }
 

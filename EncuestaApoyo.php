@@ -86,11 +86,14 @@ include "includes/function/session.php";
 
             <?php
             include "includes/function/funciones.php";
+            $passed = "badge-success";
+                        $mediumPassed = "badge-warning";
+                        $noPassed = "badge-danger";
             $resultado = myScore(5);
 
             if (mysqli_num_rows($resultado) > 0) {
                 ?>
-                <div>
+                
                     <div class="container mt-5">
                         <h2>Tabla de Resultados</h2>
                         <table class="table table-striped table-bordered">
@@ -106,13 +109,13 @@ include "includes/function/session.php";
 
                                 // Mostrar los resultados en una tabla
                                 while ($fila = mysqli_fetch_assoc($resultado)) {
-                                    echo "<tr><td>" . $fila["fecha"] . "</td><td>" . $fila["resultado"] . "</td></tr>";
+                                    echo "<tr><td>" . $fila["fecha"] . "</td><td>" . $fila["resultado"]/2 . "</td></tr>";
                                 }
                                 ?>
                             </tbody>
                         </table>
                     </div>
-                </div>
+                
                 <?php
             }
             ?>
@@ -171,7 +174,8 @@ include "includes/function/session.php";
 
                                                                     <span class="badge
                                                                                                                                                         <?php
-                                                                                                                                                        if ($result1["total"] / 2 <= 83) {
+                                                                                                                                                        if                    
+                                                                                                                                                        ($result1["total"] / 2 <= 83){ 
                                                                                                                                                             echo $noPassed;
                                                                                                                                                         } elseif ($result1["total"] / 2 > 83 && $result1["total"] / 2 <= 98) {
                                                                                                                                                             echo $mediumPassed;
@@ -348,12 +352,7 @@ include "includes/function/session.php";
                                             <?php
                                         } else {
                                             ?>
-<<<<<<< HEAD
-                                            <a class="btn btn-info" style="font-size: 9rem; width: fit-content; margin: 0;"
-                                                href="PreguntasSeccion.php?ques=<?php echo $row["nombre"]; ?>">Empezar</a>
-=======
                                             <a class="btn btn-info mx-auto" style="font-size: 3rem; width: fit-content; margin-top: 2rem;" href="PreguntasSeccion.php?ques=<?php echo $row["nombre"]; ?>">Empezar</a>
->>>>>>> 1966514930a46b85daa5a348d14eb0739120b0dd
                                             <?php
                                         }
                                         ?>
@@ -377,14 +376,11 @@ include "includes/function/session.php";
                                         <h5 class="card-title text-center font-weight-bold">
                                             <?php echo romano($row["id_seccion"]); ?>.
                                             <?php echo $row["nombre"]; ?>
-                                        </h5>
-
-<<<<<<< HEAD
-                                        <a class="btn btn-info"
+                                        </h5> 
+                                            <a class="btn btn-info"
                                             href="InvitedSeccion.php?ques=<?php echo $row["nombre"]; ?>">Empezar</a>
-=======
+
                                         <a class="btn btn-info mx-auto" href="InvitedSeccion.php?ques=<?php echo $row["nombre"]; ?>">Empezar</a>
->>>>>>> 1966514930a46b85daa5a348d14eb0739120b0dd
 
                                     </div>
                                 </div>
@@ -421,9 +417,5 @@ include "includes/function/session.php";
     </footer>
     <!-- Pie de pagina -->
 </body>
-<<<<<<< HEAD
 
 </html>
-=======
-</html>
->>>>>>> 1966514930a46b85daa5a348d14eb0739120b0dd
