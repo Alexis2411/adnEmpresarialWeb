@@ -2,6 +2,7 @@
 $accion = $_POST['action'];
 $usuario = $_POST['username'];
 $password = $_POST['password'];
+$archivo = $_POST['archivo'];
 define('MESAGE', "Error Interno");
 
 if ($accion === 'login' && $usuario != '' && $password != '') {
@@ -26,7 +27,7 @@ if ($accion === 'login' && $usuario != '' && $password != '') {
                     $respuesta = array(
                         'type' => 'success',
                         'title' => 'INICIANDO SESIÓN',
-                        'href' => 'MenuEncuestas.php'
+                        'href' => $archivo
                     );
                 } else if ($tipo === 2) {
                     session_start();

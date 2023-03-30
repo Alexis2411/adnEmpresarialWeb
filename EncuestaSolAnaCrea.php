@@ -1,6 +1,6 @@
 <?php
 session_start();
-$_SESSION['archivo'] = 'EncuestaSolAnaCrea.php';
+$_SESSION['archivo'] = basename(__FILE__);
 date_default_timezone_set('America/Mexico_City');
 include "includes/function/session.php";
 ?>

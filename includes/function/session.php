@@ -1,7 +1,7 @@
 <?php
  function authenticatedUser(){
     if(!checkUser()){
-      header('Location: InicioSesion.php');
+      header('Location: InicioSesion.php?archivo=' . $_SESSION['archivo']);
       exit();
     } 
   }

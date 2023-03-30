@@ -5,6 +5,11 @@
  if (isset($_SESSION["admin"])) {
     header("location: AdminInicio.php");
 }
+if(isset($_GET["archivo"]) && $_GET["archivo"] !=""){
+    $archivo = ($_GET["archivo"]);
+  }else{
+    $archivo = "MenuEncuestas.php";
+  }
 ?>
 <!DOCTYPE html>
 <html>
@@ -38,6 +43,7 @@
                             <input type="checkbox" name="recordar" id="recordar" value="1"> Recordar Sesión
                             </label>
                             <input type="hidden" id="action" name="action" value="login">
+                            <input type="hidden" id="archivo" name="archivo" value="<?php echo $archivo; ?>">
                             <input type="submit" class="btn btn-info btn-lg botones" value="Iniciar Sesión">
                             <a class="btn btn-outline-dark btn-lg botones" href="index.php" role="button"> Cancelar </a>
                         </form>
