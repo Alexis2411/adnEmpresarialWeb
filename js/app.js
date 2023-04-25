@@ -127,6 +127,73 @@ $(document).ready(function () {
     }
   });
 
+  $('#registroA').on('submit', function (e) {
+    e.preventDefault();
+    const datos = $(this).serializeArray();
+    if (validaCamposA()) {
+      if ($("#contrasenaA").val() === $("#verificacionA").val()) {
+        if ($("#contrasenaA").val().length > 7) {
+          if ($('#term_conA').is(':checked')) {
+            $.ajax({
+              type: "POST",
+              data: datos,
+              url: "includes/model/modelo-usuario.php",
+              dataType: "json",
+              success : function (reply) {
+                if (reply.type === 'success') {
+                  swal({
+                    type: `${reply.type}`,
+                    title: `${reply.title}`,
+                    text: `${reply.text}`,
+                    showConfirmButton: false,
+                    timer: 1500
+                  });
+                  setTimeout(() => {
+                    window.location.href = 'MenuEncuestas.php';
+                  }, 1500);
+                } else {
+                  Swal.fire({
+                    type: `${reply.type}`,
+                    title: `${reply.title}`,
+                    text: `${reply.text}`,
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+                }
+              }
+            });
+          } else {
+            Swal.fire({
+              type: 'error',
+              title: 'ACEPTE TÉRMINOS Y CONDICIONES',
+              text: 'NO HA ACEPTADO TÉRMINOS Y CONDICIONES'
+            })
+          }
+        } else {
+          Swal.fire({
+            type: 'error',
+            title: 'CONTRASEÑA CORTA',
+            text: 'LA CONTRASEÑA ES MUY CORTA'
+          })
+        }
+
+      } else {
+        Swal.fire({
+          type: 'error',
+          title: 'NO COINCIDEN',
+          text: 'LAS CONTRASEÑAS NO COINCIDEN'
+        })
+      }
+    } else {
+      Swal.fire({
+        type: 'error',
+        title: 'CAMPOS VACÍOS',
+        text: 'AÚN QUEDAN CAMPOS VACÍOS'
+      })
+    }
+  });
+
+
 
   $("#contrasena").keyup(function () {
     var strongRegex = new RegExp("^(?=.{8,})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\\W).*$", "g");
@@ -183,6 +250,28 @@ $(document).ready(function () {
       return false;
     }
   }
+  function validaCamposA() {
+    var total = 0;
+    var r = 0;
+    $('#registroA .obg').each(function () {
+      if ($(this).val() == "") {
+        $(this).addClass('pendiente');
+      } else {
+        if ($(this).hasClass('pendiente')) {
+          $(this).removeClass('pendiente');
+        }
+        r++;
+      }
+      total++;
+    });
+
+    if (total === r) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
 
 
   $(".select-res").on("click", function (e) {

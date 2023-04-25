@@ -74,6 +74,131 @@ if ($accion === 'login' && $usuario != '' && $password != '') {
     die(json_encode($respuesta));
 }
 
+if ($accion == 'crearA') {
+    if (isset($_POST['correoA']) && $_POST['correoA'] != "" && isset($_POST['contrasenaA']) && $_POST['contrasenaA'] != "" && isset($_POST['verificacionA']) && $_POST['verificacionA'] != "") {
+        if (!empty($_POST['grado_estudiosA']) && $_POST['grado_estudiosA'] != "") {
+
+            //opcional
+            if (isset($_POST["nombreA"]) && $_POST["nombreA"] != '') {
+                $nombre = $_POST["nombreA"];
+            } else {
+                $nombre = "";
+            }
+            
+            if (isset($_POST["apellidosA"]) && $_POST["apellidosA"] != '') {
+                $apellidos = $_POST["apellidosA"];
+            } else {
+                $apellidos = "";
+            }
+            
+            if (isset($_POST["generoA"]) && $_POST["generoA"] != '') {
+                $genero = $_POST["generoA"];
+            } else {
+                $genero = "";
+            }
+            
+            // Obligatorio
+            $grado = $_POST["grado_estudiosA"];
+            $correo = $_POST["correoA"];
+            $contrasena = $_POST["contrasenaA"];
+            $verificacion = $_POST["verificacionA"];
+            $term_con = $_POST["term_conA"];
+            $carrera = $_POST["carreraA"];
+            $matricula = $_POST["matriculaA"];
+            
+            try {
+                include "../function/conexion.php";
+                $stmt = $con->prepare("SELECT correo FROM usuario WHERE correo = ? ");
+                $stmt->bind_param('s', $correo);
+                $stmt->execute();
+                $stmt->bind_result($correoVerify);
+                $stmt->fetch();
+                if ($correoVerify == "") {
+                    if (strlen($contrasena) > 7) {
+                        if ($contrasena === $verificacion) {
+                            $opciones = array(
+                                'cost' => 12
+                            );
+                            $hash_pass = password_hash($contrasena, PASSWORD_BCRYPT, $opciones);
+            
+                            $stmt->prepare("INSERT INTO usuario (nombre, apellidos, correo, contrasena, term_con) VALUES (?,?,?,?,?)");
+                            $stmt->bind_param('ssssi', $nombre, $apellidos, $correo, $hash_pass, $term_con);
+                            $stmt->execute();
+                            $id_user = $stmt->insert_id;
+            
+                            if ($stmt->affected_rows > 0) {
+                                $stmt->prepare("INSERT INTO estudiante(id_usuario, grado, carrera, matricula, genero) VALUES (?,?,?,?,?)");
+                                $stmt->bind_param('issss', $id_user, $grado, $carrera, $matricula, $genero);
+                                $stmt->execute();
+                                if ($stmt->affected_rows > 0) {
+                                    session_start();
+                                    $_SESSION["usuario"] = $id_user;
+                                    $_SESSION["nombre"] = $nombre;
+                                    die(json_encode($res = array(
+                                        'type' => 'success',
+                                        'title' => 'REGISTRADO CORRECTAMENTE',
+                                        'text' => 'SE HA REGISTRADO CORRECTAMENTE'
+                                    )));
+                                } else {
+                                    die(json_encode($res = array(
+                                        'type' => 'error',
+                                        'title' => 'Internal Error 406',
+                                        'text' => 'MESAGE'
+                                    )));
+                                }
+                            } else {
+                                $res = array(
+                                    'type' => 'error',
+                                    'title' => 'Internal Error 404',
+                                    'text' => 'MESAGE'
+                                );
+                            }
+                        } else {
+                            die(json_encode($res = array(
+                                'type' => 'error',
+                                'title' => 'LAS CONTRASEÑAS NO COINCIDEN',
+                                'text' => 'MESAGE'
+                            )));
+                        }
+                    } else {
+                        die(json_encode($res = array(
+                            'type' => 'error',
+                            'title' => 'LA CONTRASEÑA ES MUY CORTA',
+                            'text' => 'MESAGE'
+                        )));
+                    }
+                } else {
+                    die(json_encode($res = array(
+                        'type' => 'error',
+                        'title' => 'EL CORREO YA EXISTE',
+                        'text' => 'MESAGE'
+                    )));
+                }
+                $stmt->close();
+                $con->close();
+            } catch (Exception $e) {
+                echo "¡ERROR!" . $e->getMessage() . "<br>";
+                return false;
+            }
+        } else {
+            $res = array(
+                'type' => 'error',
+                'title' => 'Internal Error 403',
+                'text' => 'MESAGE'
+            );
+        }
+    } else {
+        $res = array(
+            'type' => 'error',
+            'title' => 'Internal Error 402',
+            'text' => 'MESAGE'
+        );
+    }
+    die(json_encode($res));
+}
+
+
+
 if ($accion == 'crear') {
     if (isset($_POST['correo']) && $_POST['correo'] != "" && isset($_POST['nombre_empresa']) && $_POST['nombre_empresa'] != "" && isset($_POST['term_con']) && $_POST['term_con'] != "" && isset($_POST['contrasena']) && $_POST['contrasena'] != "" && isset($_POST['verificacion']) && $_POST['verificacion'] != "") {
         if (!empty($_POST['fecha_fundacion']) && $_POST['fecha_fundacion'] != "" && !empty($_POST['tamano_empresa']) && $_POST['tamano_empresa'] != "" && !empty($_POST['tipo_empresa']) && $_POST['tipo_empresa'] != "" && !empty($_POST['pais']) && $_POST['pais'] != "" && !empty($_POST['estado']) && $_POST['estado'] != "" && !empty($_POST['ciudad']) && $_POST['ciudad'] != "" && !empty($_POST['grado_estudios']) && $_POST['grado_estudios'] != "") {
