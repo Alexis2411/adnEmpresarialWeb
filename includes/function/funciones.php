@@ -243,6 +243,17 @@ function totalUser()
     }
 }
 
+function datos()
+{
+    include 'conexion.php';
+    try{
+        return $con->query('SELECT estado, resultado FROM usuario u INNER JOIN resultado r ON r.id_usuario = u.id_usuario INNER JOIN empresa e ON e.id_usuario = u.id_usuario WHERE id_seccion = 5');
+    }catch (\Throwable $e) {
+        echo "Error!!" . $e->getMessage() . "<br>";
+        return false;
+    }
+}
+
 function deleteUser($id){
     include 'conexion.php';
     try{
@@ -309,6 +320,33 @@ function onlySection()
     } catch (Exception $e) {
         echo "Error!!" . $e->getMessage() . "<br>";
         return false;
+    }
+}
+
+function obtenerData($datax, $datay, $seccion){
+    include 'conexion.php';
+    try {
+        return $con->query("SELECT '$datax', '$datay', from usuario u inner join directivo d on u.id_usuario = d.id_usuario inner join resultado r on r.id_usuario  =u.id_usuario where id_seccion='$seccion'");
+    } catch (Exception $e) {
+        echo "Error!!" . $e->getMessage() . "<br>";
+        return false;
+    }
+}
+
+function mydata($datax, $datay, $seccion, $x){
+    $result=obtenerData($datax, $datay, $seccion);
+    $valoresy=array();
+    $valoresx=array();
+    while ($ver=mysqli_fetch_row($result)){
+        $valoresx[]=$ver[0];
+        $valoresy[]=$ver[1];
+    }
+    $datosX=json_encode($valoresx);
+    $datosY=json_encode($valoresy);
+    if ($x=1){
+        return ($datosX);
+    }else{
+        return ($datosY);
     }
 }
 

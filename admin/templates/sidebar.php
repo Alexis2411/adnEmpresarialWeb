@@ -49,6 +49,61 @@
                         </li>
                     </ul>
                 </li>
+
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class=" nav-icon fas fa-poll"></i>
+                        <p>
+                            Análisis de Estudiantes
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="RegresiónLineal.php" class="nav-link">
+                                <i class="nav-icon far fa-check-circle text-info"></i>
+                                <p>Regresión Lineal</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="CorrelacionLineal.php" class="nav-link">
+                                <i class="nav-icon far fa-check-circle text-info"></i>
+                                <p>Correlación Lineal</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class=" nav-icon fas fa-poll"></i>
+                        <p>
+                            Análisis de Directivos
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="Busqueda.php" class="nav-link">
+                                <i class="nav-icon far fa-check-circle text-info"></i>
+                                <p>Regresión Lineal</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="Busqueda.php" class="nav-link">
+                                <i class="nav-icon far fa-check-circle text-info"></i>
+                                <p>Correlación Lineal</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                
             </ul>
         </nav>
         <!-- /.sidebar-menu -->
