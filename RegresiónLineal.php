@@ -72,20 +72,69 @@ include "includes/function/sessionadmin.php";
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="num_encuesta">Seleccione la encuesta:</label>
-                    <select class="form-control" name="num_encuesta">
-                      <option value="5">Diagnostico para la comunicacion de apoyo</option>
+                    <label for="num_encuesta_0">Seleccione la encuesta:</label>
+                    <select class="form-control" name="num_encuesta_0">
+                      <option value="35">Desarrollo del autoconocimiento</option>
+                      <option value="47">Inteligencia Emocional</option>
+                      <option value="36">Indicador del estilo cognitivo</option>
+                      <option value="48">Locus de Control</option>
+                      <option value="37">Tolerancia a la ambigüedad</option>
+                      <option value="38">Autoevaluación Básica y Esencial</option>
                       <option value="8">Evaluación del manejo del estrés</option>
+                      <option value="39">Administración del tiempo</option>
+                      <option value="40">Personalidad Tipo A</option>
+                      <option value="42">Reajuste Social</option>
                       <option value="11">Diagnóstico para la solución creativa</option>
+                      <option value="41">Creatividad</option>
+                      <option value="43">Actitud Innovadora</option>
+                      <option value="49">Estilo Creativo</option>
+                      <option value="5">Diagnóstico para la comunicación de apoyo</option>
+                      <option value="50">Estilos de comunicación</option>
                       <option value="14">Ganar Poder e Influencia</option>
                       <option value="25">Estrategias de influencia</option>
                       <option value="28">Diagnóstico para motivar a los demás</option>
+                      <option value="44">Desempeño laboral</option>
                       <option value="29">Manejo de conflictos interpersonales</option>
+                      <option value="45">Mejorar Conflictos</option>
                       <option value="30">Facultamiento y Delegación Eficaces</option>
                       <option value="31">Facultamiento Personal</option>
                       <option value="32">Comportamientos Para el Desarrollo</option>
                       <option value="33">Necesidad de Formación de Equipos</option>
                       <option value="34">Liderar el Cambio Positivo</option>
+                      <option value="46">Maquiavelismo</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="num_encuesta">Seleccione la encuesta:</label>
+                    <select class="form-control" name="num_encuesta">
+                    <option value="35">Desarrollo del autoconocimiento</option>
+                      <option value="47">Inteligencia Emocional</option>
+                      <option value="36">Indicador del estilo cognitivo</option>
+                      <option value="48">Locus de Control</option>
+                      <option value="37">Tolerancia a la ambigüedad</option>
+                      <option value="38">Autoevaluación Básica y Esencial</option>
+                      <option value="8">Evaluación del manejo del estrés</option>
+                      <option value="39">Administración del tiempo</option>
+                      <option value="40">Personalidad Tipo A</option>
+                      <option value="42">Reajuste Social</option>
+                      <option value="11">Diagnóstico para la solución creativa</option>
+                      <option value="41">Creatividad</option>
+                      <option value="43">Actitud Innovadora</option>
+                      <option value="49">Estilo Creativo</option>
+                      <option value="5">Diagnóstico para la comunicación de apoyo</option>
+                      <option value="50">Estilos de comunicación</option>
+                      <option value="14">Ganar Poder e Influencia</option>
+                      <option value="25">Estrategias de influencia</option>
+                      <option value="28">Diagnóstico para motivar a los demás</option>
+                      <option value="44">Desempeño laboral</option>
+                      <option value="29">Manejo de conflictos interpersonales</option>
+                      <option value="45">Mejorar Conflictos</option>
+                      <option value="30">Facultamiento y Delegación Eficaces</option>
+                      <option value="31">Facultamiento Personal</option>
+                      <option value="32">Comportamientos Para el Desarrollo</option>
+                      <option value="33">Necesidad de Formación de Equipos</option>
+                      <option value="34">Liderar el Cambio Positivo</option>
+                      <option value="46">Maquiavelismo</option>
                     </select>
                   </div>
                 </div>

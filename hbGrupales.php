@@ -47,36 +47,33 @@ session_start();
                     <div class="card h-100">
                         <div class="card-body">
                             <h2 class="card-title">Facultamiento y Delegación</h2>
-                            <p class="card-text">-Facultar a los demás<br>
-                                                -Delegación<br>
-                                                -Poder compartido</p>
+                            <p class="card-text">
+                                <a href="EncuestaFaDele.php">- Facultamiento y Delegación Eficaces</a><br>
+                                <a href="EncuestaFaPe.php">- Evaluación del Facultamiento Personal</a><br>
                         </div>
-                        <div class="card-footer"><a class="btn btn-primary btn-sm" href="EncuestaFaDele.php">Empezar</a>
-                        </div>
+                        <div class="card-footer"><a>Seleccione una para empezar</a></div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-5">
                     <div class="card h-100">
                         <div class="card-body">
                             <h2 class="card-title">Formación de Equipos</h2>
-                            <p class="card-text">-Evaluación del desarrollo de equipos<br>
-                                                -Trabajo en equipo<br>
-                                                -Fomento del liderazgo efectivo de equipo</p>
+                            <p class="card-text">
+                                <a href="EncuestaCompDesaE.php">- Comportamiento para el Desarrollo de Equipos</a><br>
+                                <a href="EncuestaNeFoE.php">- Diagnostico de la Necesidad de Formacion de Equipos</a><br>
                         </div>
-                        <div class="card-footer"><a class="btn btn-primary btn-sm" href="EncuestaCompDesaE.php">Comenzar</a>
-                        </div>
+                        <div class="card-footer"><a>Seleccione una para empezar</a></div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-5">
                     <div class="card h-100">
                         <div class="card-body">
                         <h2 class="card-title">Liderar el Cambio Positivo</h2>
-                            <p class="card-text">-Creación del una desviación positiva<br>
-                                                -Liderar el cambio positivo<br>
-                                                -Movilización de las habilidades de los demás</p>
+                        <p class="card-text">
+                                <a href="EncuestaDirCamPos.php">- Liderar el Cambio Positivo</a><br>
+                                <a href="EncuestaMaquiavelismo.php">- Escala de Maquiavelismo</a><br>
                         </div>
-                        <div class="card-footer"><a class="btn btn-primary btn-sm" href="EncuestaDirCamPos.php">Empezar</a>
-                        </div>
+                        <div class="card-footer"><a>Seleccione una para empezar</a></div>
                     </div>
                 </div>
             </div>

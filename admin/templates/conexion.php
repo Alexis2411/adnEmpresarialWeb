@@ -1,6 +1,6 @@
 <?php
 function conexion(){
-    return mysqli_connect('localhost', 'adnempresarialco_demo', 'Uv2020@#$', 'adnempre_encuesta');   
+    return mysqli_connect('localhost', 'adnempre_admin', 'Uv2020@#$', 'adnempre_encuesta');   
 }
 
 ?>

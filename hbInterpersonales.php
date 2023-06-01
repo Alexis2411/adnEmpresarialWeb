@@ -47,24 +47,22 @@ session_start();
                     <div class="card h-100">
                         <div class="card-body">
                             <h2 class="card-title">Comunicación de Apoyo</h2>
-                            <p class="card-text">-Coaching<br>
-                                                -Consultoría u operación<br>
-                                                -Escucha</p>
+                            <p class="card-text">
+                                <a href="EncuestaApoyo.php">- Evaluación para la Comunicación de Apoyo</a><br>
+                                <a href="Encuesta.php">- Estilos de Comunicación</a><br>
                         </div>
-                        <div class="card-footer"><a class="btn btn-primary btn-sm" href="EncuestaApoyo.php">Empezar</a>
-                        </div>
+                        <div class="card-footer"><a>Seleccione una para empezar</a></div>
                     </div>
                 </div>
                 <div class="col-md-6 mb-5">
                     <div class="card h-100">
                         <div class="card-body">
                             <h2 class="card-title">Ganar Poder e Influencia</h2>
-                            <p class="card-text">-Ganar Poder<br>
-                                                -Ejercer influencia<br>
-                                                -Incrementar Autoridad</p>
+                            <p class="card-text">
+                                <a href="EncuestaPoderInlfuencia.php">- Ganar Poder E Influencia</a><br>
+                                <a href="EncuestaEstrategiasInfluencia.php">- Uso de Estrategias de Influencia</a><br>
                         </div>
-                        <div class="card-footer"><a class="btn btn-primary btn-sm" href="EncuestaPoderInlfuencia.php">Comenzar</a>
-                        </div>
+                        <div class="card-footer"><a>Seleccione una para empezar</a></div>
                     </div>
                 </div>
             </div>
@@ -73,24 +71,22 @@ session_start();
                     <div class="card h-100">
                         <div class="card-body">
                             <h2 class="card-title">Motivación de los demás</h2>
-                            <p class="card-text">-Diagnóstico de un bajo desempeño<br>
-                                                -Creación de un entorno motivador<br>
-                                                -Recompensa de logros</p>
+                            <p class="card-text">
+                                <a href="EncuestaMotivación.php">- Diagnostico de un Desempeño Deficiente e Incremento de la Motivación</a><br>
+                                <a href="EncuestaDesempenoLaboral.php">- Desempeño Laboral</a><br>
                         </div>
-                        <div class="card-footer"><a class="btn btn-primary btn-sm" href="EncuestaMotivación.php">Empezar</a>
-                        </div>
+                        <div class="card-footer"><a>Seleccione una para empezar</a></div>
                     </div>
                 </div>
                 <div class="col-md-6 mb-5">
                     <div class="card h-100">
                         <div class="card-body">
                             <h2 class="card-title">Manejo de Conflictos</h2>
-                            <p class="card-text">-Identificación de las fuentes<br>
-                                                -Selección de estrategias<br>
-                                                -Resolución de confrontaciones</p>
+                            <p class="card-text">
+                                <a href="EncuestaConInt.php">- Manejo de Conflictos Interpersonales</a><br>
+                                <a href="EncuestaManejoConflictos.php">- Estrategias par el Manejo de Conflictos</a><br>
                         </div>
-                        <div class="card-footer"><a class="btn btn-primary btn-sm" href="EncuestaConInt.php">Empezar</a>
-                        </div>
+                        <div class="card-footer"><a>Seleccione una para empezar</a></div>
                     </div>
                 </div>
             </div>
