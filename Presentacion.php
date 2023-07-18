@@ -27,14 +27,14 @@ session_start();
                 <h2  id="comoSeMide">¿Cómo se mide?</h2>
                 Cada bloque está conformado por un número irregular de ítems <br>
                 A cada ítem tiene asignado un valor análogo a 10 puntos. Si=10 puntos No=0 puntos <br>
-                Cada Bloque en atención al número de ítems, totaliza la sumatoria de puntos en función al número de ítems.<br>
-                La totalidad de puntos de las cuatro secciones del proceso administrativo es 1080 puntos. <br>
+                Cada Bloque en atención al número de ítems, totaliza la sumatoria de puntos en función al número de ítems.
+                La totalidad de puntos de las cuatro secciones del proceso administrativo es 1080 puntos. <br><br>
                 Se pretende unificar el peso de cada proceso administrativo, porque en función de los puntos de cada sección se tiene un “desequilibrio” en importancia y proporción de cada sección.
-                <br>
+
                 Si se considera que las cuatro secciones del proceso administrativo representan el 100%, entonces el total obtenido por sección se saca la proporción correspondiente del 25%
-                <br>
+                <br><br>
                 Tomando en consideración que cada bloque tiene un número de ítems éstos se dividirán entre el 25% de su valor por bloque, así entonces, la sección de planeación tiene diez ítems casa uno tiene un valor de 2.5% y se contabilizarán solo los que tengan como respuesta Sí.
-                <br>
+                <br><br>
                 Habiendo ya contabilizado y ponderado cada ítem y las cuatro secciones, se tendrá un total por cada área del proceso administrativo, teniendo un máximo puntaje por sección se puede asignar un semáforo de atención. En el caso de Planeación, siendo el máximo 450 puntos que representa el 100% de puntaje, dividido en tres partes proporcionales nos dan 150 puntos como mínimo (rojo) 300 (regular) y 450 (bien), estableciendo en una escala sería: (0-150 puntos)=Rojo (atención urgente)  de (151-300 puntos)=Amarillo (atención mediata) de (301-45 puntos)=Verde (atención a mediano plazo).
                 <br><br>
                 <b>Estableciendo:</b> <br>
