@@ -51,7 +51,7 @@ session_start();
                                 <a href="EncuestaFaDele.php">- Facultamiento y Delegación Eficaces</a><br>
                                 <a href="EncuestaFaPe.php">- Evaluación del Facultamiento Personal</a><br>
                         </div>
-                        <div class="card-footer"><a>Seleccione una para empezar</a></div>
+                        <div class="card text-white bg-secondary  py-4 text-center"><a>Seleccione una para empezar</a></div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-5">
@@ -62,7 +62,7 @@ session_start();
                                 <a href="EncuestaCompDesaE.php">- Comportamiento para el Desarrollo de Equipos</a><br>
                                 <a href="EncuestaNeFoE.php">- Diagnostico de la Necesidad de Formacion de Equipos</a><br>
                         </div>
-                        <div class="card-footer"><a>Seleccione una para empezar</a></div>
+                        <div class="card text-white bg-secondary  py-4 text-center"><a>Seleccione una para empezar</a></div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-5">
@@ -73,7 +73,7 @@ session_start();
                                 <a href="EncuestaDirCamPos.php">- Liderar el Cambio Positivo</a><br>
                                 <a href="EncuestaMaquiavelismo.php">- Escala de Maquiavelismo</a><br>
                         </div>
-                        <div class="card-footer"><a>Seleccione una para empezar</a></div>
+                        <div class="card text-white bg-secondary  py-4 text-center"><a>Seleccione una para empezar</a></div>
                     </div>
                 </div>
             </div>
