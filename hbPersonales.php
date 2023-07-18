@@ -51,7 +51,7 @@ session_start();
                                 <a href="encuesta.php">- Locus de control</a><br>
                                 <a href="EncuestaAmbiguedad.php">- Tolerancia a la Ambigüedad</a>
                         </div>
-                        <div class="card text-white bg-secondary my-5 py-4 text-center"><a>Seleccione una para empezar</a></div>
+                        <div class="card text-white bg-secondary py-4 text-center"><a>Seleccione una para empezar</a></div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-5">
@@ -64,7 +64,7 @@ session_start();
                                 <a href="EncuestaPersonalidad.php">- Personalidad tipo A</a><br>
                                 <a href="encuesta.php">- Reajuste Social</a><br>
                         </div>
-                        <div class="card text-white bg-secondary my-5 py-4 text-center"><a>Seleccione una para empezar</a></div>
+                        <div class="card text-white bg-secondary py-4 text-center"><a>Seleccione una para empezar</a></div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-5">
@@ -77,7 +77,7 @@ session_start();
                                 <a href="EncuestaActitudInnovadora.php">- Actitud Innovadora</a><br>
                                 <a href="encuesta.php">- Estilo creativo</a><br>
                         </div>
-                        <div class="card text-white bg-secondary my-5 py-4 text-center"><a>Seleccione una para empezar</a></div>
+                        <div class="card text-white bg-secondary py-4 text-center"><a>Seleccione una para empezar</a></div>
                     </div>
                 </div>
             </div>
