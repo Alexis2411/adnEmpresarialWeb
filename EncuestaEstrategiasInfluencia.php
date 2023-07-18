@@ -78,7 +78,7 @@ include "includes/function/session.php";
 
         <div class="col-md-6">
                 <div class="row">
-                    <div class="col-md-4 d-flex " style="max-width: 100% ; width: 100%">
+                    <div class="col-md-12 d-flex " style="max-width: 30rem ; width: 100%; margin: auto; margin-bottom: 2rem">
             <!-- Contenido 4 columnas -->
                     <?php
                     include "includes/function/funciones.php";
@@ -115,7 +115,7 @@ include "includes/function/session.php";
                                             <?php
                                         }else {
                                             ?>
-                                            <a class="btn btn-info mx-auto" style="font-size: 3rem; width: fit-content; margin-top: 2rem;" href="PreguntasSeccion.php?ques=<?php echo $row["nombre"]; ?>">Empezar</a>
+                                            <a class="btn btn-info mx-auto" style="font-size: 2rem; width: fit-content; margin-top: 2rem;" href="PreguntasSeccion.php?ques=<?php echo $row["nombre"]; ?>">Empezar</a>
                                             <?php
                                         }
                                         ?>
