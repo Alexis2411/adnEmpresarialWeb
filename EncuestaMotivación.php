@@ -113,7 +113,7 @@ include "includes/function/session.php";
             }
             ?>
                 <div class="row">
-                    <div class="col-md-12 d-flex " style="max-width: 100% ; width: 100%">
+                    <div class="col-md-12 d-flex " style="max-width: 30rem ; width: 100%; margin: auto; margin-bottom: 2rem">
             <!-- Contenido 4 columnas -->
                     <?php
                     if (isset($_SESSION['usuario'])) {
@@ -122,6 +122,7 @@ include "includes/function/session.php";
                             foreach ($seccion as $row) {
                                 ?>
                                 <div class="card" style="margin: 2px">
+                                    <img class="card-img-top image-responsive" src="img/seccion1.jpg" alt="Card image cap" max-width="50%" width="50%">
                                     <div class="card-body">
                                         <h5 class="text-center font-weight-bold" style="font-size: 1rem; width: fit-content">
                                         </h5>
@@ -466,7 +467,7 @@ include "includes/function/session.php";
                                             <?php
                                         }else {
                                             ?>
-                                            <a class="btn btn-info mx-auto" style="font-size: 3rem; width: fit-content; margin-top: 2rem;" href="PreguntasSeccionseis.php?ques=<?php echo $row["nombre"]; ?>">Empezar</a>
+                                            <a class="btn btn-info mx-auto" style="font-size: 2rem; width: fit-content; margin-top: 2rem;" href="PreguntasSeccionseis.php?ques=<?php echo $row["nombre"]; ?>">Empezar</a>
                                             <?php
                                         }
                                         ?>
