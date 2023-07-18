@@ -51,7 +51,7 @@ session_start();
                                 <a href="EncuestaApoyo.php">- Evaluación para la Comunicación de Apoyo</a><br>
                                 <a href="Encuesta.php">- Estilos de Comunicación</a><br>
                         </div>
-                        <div class="card-footer"><a>Seleccione una para empezar</a></div>
+                        <div class="card text-white bg-secondary  py-4 text-center"><a>Seleccione una para empezar</a></div>
                     </div>
                 </div>
                 <div class="col-md-6 mb-5">
@@ -62,7 +62,7 @@ session_start();
                                 <a href="EncuestaPoderInlfuencia.php">- Ganar Poder E Influencia</a><br>
                                 <a href="EncuestaEstrategiasInfluencia.php">- Uso de Estrategias de Influencia</a><br>
                         </div>
-                        <div class="card-footer"><a>Seleccione una para empezar</a></div>
+                        <div class="card text-white bg-secondary  py-4 text-center"><a>Seleccione una para empezar</a></div>
                     </div>
                 </div>
             </div>
@@ -75,7 +75,7 @@ session_start();
                                 <a href="EncuestaMotivación.php">- Diagnostico de un Desempeño Deficiente e Incremento de la Motivación</a><br>
                                 <a href="EncuestaDesempenoLaboral.php">- Desempeño Laboral</a><br>
                         </div>
-                        <div class="card-footer"><a>Seleccione una para empezar</a></div>
+                        <div class="card text-white bg-secondary  py-4 text-center"><a>Seleccione una para empezar</a></div>
                     </div>
                 </div>
                 <div class="col-md-6 mb-5">
@@ -86,7 +86,7 @@ session_start();
                                 <a href="EncuestaConInt.php">- Manejo de Conflictos Interpersonales</a><br>
                                 <a href="EncuestaManejoConflictos.php">- Estrategias par el Manejo de Conflictos</a><br>
                         </div>
-                        <div class="card-footer"><a>Seleccione una para empezar</a></div>
+                        <div class="card text-white bg-secondary  py-4 text-center"><a>Seleccione una para empezar</a></div>
                     </div>
                 </div>
             </div>
