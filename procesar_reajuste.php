@@ -31,23 +31,22 @@ $nombre = 'Inteligencia Emocional';
             <section class="content">
                 <h1>Resultados del Cuestionario</h1>
                 <?php
-                // Obtener las respuestas del formulario
-                $respuestas = $_POST;
+                if ($_SERVER["REQUEST_METHOD"] === "POST") {
+                    // Verificar si se han seleccionado opciones
+                    if (isset($_POST["situacion"]) && is_array($_POST["situacion"])) {
+                        // Obtener los valores seleccionados
+                        $valoresSeleccionados = $_POST["situacion"];
 
-                // Crear un arreglo para almacenar la suma de las respuestas
-                $suma = 0;
+                        // Sumar los valores seleccionados
+                        $sumaValores = array_sum($valoresSeleccionados);
 
-                // Recorrer todas las respuestas y sumar las "a" y "b" correspondientes
-                foreach ($respuestas as $pregunta => $respuesta) {
-                    if ($respuesta === '1') {
-                        $suma++;
+                        // Mostrar la suma de los valores seleccionados
+                        echo "La suma de los valores seleccionados es: " . $sumaValores;
+                    } else {
+                        // Si no se seleccionó ninguna opción
+                        echo "No se seleccionaron opciones del cuestionario.";
                     }
                 }
-
-                // Mostrar el resultado
-                echo "Suma de respuestas correctas: " . $suma . "<br>";
-
-                // Realizar la conexión a la base de datos (reemplaza los valores con tus credenciales)
                 $servername = "localhost";
                 $username = "adnempre_admin";
                 $password = "Uv2020@#$";
@@ -60,11 +59,10 @@ $nombre = 'Inteligencia Emocional';
                 if ($conn->connect_error) {
                     die("Error al conectar a la base de datos: " . $conn->connect_error);
                 }
-
                 $id_usuario = $_SESSION['usuario'];
-                $id_pregunta = 114;
-                $id_seccion = 48;
-                $valor = $suma;
+                $id_pregunta = 115;
+                $id_seccion = 42;
+                $valor = $sumaValores;
 
                 // Consulta SELECT para contar la cantidad de registros con los mismos valores
                 $select_sql = "SELECT COUNT(*) as count FROM `respuesta-preguntas` WHERE id_usuario = $id_usuario AND id_pregunta = $id_pregunta AND id_seccion = $id_seccion";
@@ -94,7 +92,7 @@ $nombre = 'Inteligencia Emocional';
                     echo "Error al realizar la consulta: " . $conn->error;
                 }
 
-                $sql = "INSERT INTO `resultado` (fecha, resultado, id_seccion, id_usuario) VALUES (NOW(),$suma, 48,  " . $_SESSION['usuario'] . ")";
+                $sql = "INSERT INTO `resultado` (fecha, resultado, id_seccion, id_usuario) VALUES (NOW(),$sumaValores, 42,  " . $_SESSION['usuario'] . ")";
                 if ($conn->query($sql) !== TRUE) {
                     echo "Error al insertar los resultados: " . $conn->error;
                 }

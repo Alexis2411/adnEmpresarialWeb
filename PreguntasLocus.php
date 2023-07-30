@@ -42,7 +42,7 @@ $nombre = 'Locus de Control';
 
                     <fieldset class="pregunta">
                         <p>Reactivo 1</p>
-                        <input type="radio" name="pregunta1" value="1"> a. Los líderes nacen, no se hacen.<br>
+                        <input type="radio" name="pregunta1" value="0"> a. Los líderes nacen, no se hacen.<br>
                         <input type="radio" name="pregunta1" value="0"> b. Los líderes se hacen, no nacen<br>
                     </fieldset>
                     <fieldset class="pregunta">
@@ -56,28 +56,28 @@ $nombre = 'Locus de Control';
                     </fieldset>
                     <fieldset class="pregunta">
                         <p>Reactivo 3</p>
-                        <input type="radio" name="pregunta3" value="1"> a. Cuando las cosas van mal en mi vida,
+                        <input type="radio" name="pregunta3" value="0"> a. Cuando las cosas van mal en mi vida,
                         generalmente es
                         porque cometí errores.<br>
-                        <input type="radio" name="pregunta3" value="0"> b. Las calamidades ocurren en mi vida sin
+                        <input type="radio" name="pregunta3" value="1"> b. Las calamidades ocurren en mi vida sin
                         importar lo que yo
                         haga.<br>
                     </fieldset>
                     <fieldset class="pregunta">
                         <p>Reactivo 4</p>
-                        <input type="radio" name="pregunta4" value="1"> a. El hecho de que haya guerra o no depende
+                        <input type="radio" name="pregunta4" value="0"> a. El hecho de que haya guerra o no depende
                         de las acciones
                         de ciertos líderes mundiales.<br>
-                        <input type="radio" name="pregunta4" value="0"> b. Es inevitable que el mundo continúe
+                        <input type="radio" name="pregunta4" value="1"> b. Es inevitable que el mundo continúe
                         sufriendo
                         guerras.<br>
                     </fieldset>
                     <fieldset class="pregunta">
                         <p>Reactivo 5</p>
-                        <input type="radio" name="pregunta5" value="1"> a. Los hijos buenos son principalmente el
+                        <input type="radio" name="pregunta5" value="0"> a. Los hijos buenos son principalmente el
                         resultado de
                         buenos padres.<br>
-                        <input type="radio" name="pregunta5" value="0"> b. Algunos hijos se vuelven malos sin
+                        <input type="radio" name="pregunta5" value="1"> b. Algunos hijos se vuelven malos sin
                         importar cómo se
                         comporten sus padres.<br>
                     </fieldset>
@@ -99,7 +99,7 @@ $nombre = 'Locus de Control';
                     </fieldset>
                     <fieldset class="pregunta">
                         <p>Reactivo 8</p>
-                        <input type="radio" name="pregunta8" value="1"> a. Evitar el castigo a los niños garantiza
+                        <input type="radio" name="pregunta8" value="0"> a. Evitar el castigo a los niños garantiza
                         que crecerán como
                         personas irresponsables.<br>
                         <input type="radio" name="pregunta8" value="0"> b. Nunca es apropiado disciplinar
@@ -126,34 +126,34 @@ $nombre = 'Locus de Control';
                     </fieldset>
                     <fieldset class="pregunta">
                         <p>Reactivo 11</p>
-                        <input type="radio" name="pregunta11" value="1"> a. Cualquier persona puede obtener buenos
+                        <input type="radio" name="pregunta11" value="0"> a. Cualquier persona puede obtener buenos
                         resultados en la
                         escuela si trabaja con el esfuerzo suficiente.<br>
-                        <input type="radio" name="pregunta11" value="0"> b. Algunas personas nunca destacarán en la
+                        <input type="radio" name="pregunta11" value="1"> b. Algunas personas nunca destacarán en la
                         escuela sin
                         importar lo mucho que se esfuercen.<br>
                     </fieldset>
                     <fieldset class="pregunta">
                         <p>Reactivo 12</p>
-                        <input type="radio" name="pregunta12" value="1"> a. Los buenos matrimonios resultan cuando
+                        <input type="radio" name="pregunta12" value="0"> a. Los buenos matrimonios resultan cuando
                         ambos cónyuges
                         trabajan continuamente en la relación.<br>
-                        <input type="radio" name="pregunta12" value="0"> b. Algunos matrimonios fracasan porque los
+                        <input type="radio" name="pregunta12" value="1"> b. Algunos matrimonios fracasan porque los
                         cónyuges
                         simplemente son incompatibles.<br>
                     </fieldset>
                     <fieldset class="pregunta">
                         <p>Reactivo 13</p>
-                        <input type="radio" name="pregunta13" value="1"> a. Tengo confianza en que puedo mejorar mis
+                        <input type="radio" name="pregunta13" value="0"> a. Tengo confianza en que puedo mejorar mis
                         habilidades
                         básicas de liderazgo a través del aprendizaje y la práctica.<br>
-                        <input type="radio" name="pregunta13" value="0"> b. Es una pérdida de tiempo tratar de
+                        <input type="radio" name="pregunta13" value="1"> b. Es una pérdida de tiempo tratar de
                         mejorar las
                         habilidades de liderazgo en un salón de clases.<br>
                     </fieldset>
                     <fieldset class="pregunta">
                         <p>Reactivo 14</p>
-                        <input type="radio" name="pregunta14" value="1"> a. Deberían enseñarse más cursos de
+                        <input type="radio" name="pregunta14" value="0"> a. Deberían enseñarse más cursos de
                         habilidades de
                         liderazgo en las escuelas de negocios.<br>
                         <input type="radio" name="pregunta14" value="0"> b. Se debe poner menos énfasis en las
@@ -162,10 +162,10 @@ $nombre = 'Locus de Control';
                     </fieldset>
                     <fieldset class="pregunta">
                         <p>Reactivo 15</p>
-                        <input type="radio" name="pregunta15" value="1"> a. Cuando recuerdo las cosas buenas que me
+                        <input type="radio" name="pregunta15" value="0"> a. Cuando recuerdo las cosas buenas que me
                         han sucedido,
                         pienso que pasaron porque hice algo bueno.<br>
-                        <input type="radio" name="pregunta15" value="0"> b. Las cosas malas que han pasado en mi
+                        <input type="radio" name="pregunta15" value="1"> b. Las cosas malas que han pasado en mi
                         vida son resultado
                         principalmente de circunstancias fuera de mi control.<br>
                     </fieldset>
@@ -200,7 +200,7 @@ $nombre = 'Locus de Control';
                     </fieldset>
                     <fieldset class="pregunta">
                         <p>Reactivo 19</p>
-                        <input type="radio" name="pregunta19" value="1"> a. Las personas buscan responsabilidad en
+                        <input type="radio" name="pregunta19" value="0"> a. Las personas buscan responsabilidad en
                         el trabajo.<br>
                         <input type="radio" name="pregunta19" value="0"> b. Las personas tratan de salirse con la
                         suya trabajando lo
@@ -226,10 +226,10 @@ $nombre = 'Locus de Control';
                     </fieldset>
                     <fieldset class="pregunta">
                         <p>Reactivo 22</p>
-                        <input type="radio" name="pregunta22" value="1"> a. Los directivos que mejoren su
+                        <input type="radio" name="pregunta22" value="0"> a. Los directivos que mejoren su
                         competencia personal
                         tendrán mayor éxito que aquellos que no lo hagan.<br>
-                        <input type="radio" name="pregunta22" value="0"> b. El éxito en las habilidades directivas
+                        <input type="radio" name="pregunta22" value="1"> b. El éxito en las habilidades directivas
                         tiene poco que
                         ver con la competencia que posea el director.<br>
                     </fieldset>
@@ -245,7 +245,7 @@ $nombre = 'Locus de Control';
                     </fieldset>
                     <fieldset class="pregunta">
                         <p>Reactivo 24</p>
-                        <input type="radio" name="pregunta24" value="1"> a. El trabajo en equipo en los negocios es
+                        <input type="radio" name="pregunta24" value="0"> a. El trabajo en equipo en los negocios es
                         un requisito
                         para el éxito.<br>
                         <input type="radio" name="pregunta24" value="0"> b. El esfuerzo individual es la mejor clave
@@ -262,16 +262,16 @@ $nombre = 'Locus de Control';
                     </fieldset>
                     <fieldset class="pregunta">
                         <p>Reactivo 26</p>
-                        <input type="radio" name="pregunta26" value="1"> a. A la larga, las personas pueden mejorar
+                        <input type="radio" name="pregunta26" value="0"> a. A la larga, las personas pueden mejorar
                         la fuerza
                         económica de un país a través de acciones responsables.<br>
-                        <input type="radio" name="pregunta26" value="0"> b. La salud económica de este país se
+                        <input type="radio" name="pregunta26" value="1"> b. La salud económica de este país se
                         encuentra, en gran
                         parte, más allá del control de los individuos.<br>
                     </fieldset>
                     <fieldset class="pregunta">
                         <p>Reactivo 27</p>
-                        <input type="radio" name="pregunta27" value="1"> a. Soy persuasivo cuando sé que tengo
+                        <input type="radio" name="pregunta27" value="0"> a. Soy persuasivo cuando sé que tengo
                         razón.<br>
                         <input type="radio" name="pregunta27" value="0"> b. Soy capaz de convencer a la mayoría de
                         la gente aun
@@ -279,10 +279,10 @@ $nombre = 'Locus de Control';
                     </fieldset>
                     <fieldset class="pregunta">
                         <p>Reactivo 28</p>
-                        <input type="radio" name="pregunta28" value="1"> a. Tiendo a planear con anticipación y a
+                        <input type="radio" name="pregunta28" value="0"> a. Tiendo a planear con anticipación y a
                         dar los pasos
                         necesarios para cumplir las metas que he establecido.<br>
-                        <input type="radio" name="pregunta28" value="0"> b. Rara vez planeo el futuro porque las
+                        <input type="radio" name="pregunta28" value="1"> b. Rara vez planeo el futuro porque las
                         cosas generalmente
                         salen bien de cualquier forma.<br>
                     </fieldset>

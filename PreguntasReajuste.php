@@ -62,7 +62,7 @@ $nombre = 'Reajuste Social';
         <div class="row">
             <div class="col-lg-12">
                 <h1>Cuestionario de Habilidades Emocionales</h1>
-                <form action="procesar_cuestionario.php" method="post">
+                <form action="procesar_reajuste.php" method="post">
                     <div class="pregunta">
                         <input type="checkbox" name="situacion[]" value="87" onchange="actualizarBurbuja()">
                         <p>1. Muerte del cónyuge o compañero <span>(87)</span></p>
