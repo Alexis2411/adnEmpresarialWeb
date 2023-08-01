@@ -136,6 +136,39 @@ function scoreSeccion($id)
     }
 }
 
+function scoreRespuestas($id)
+{
+    include 'conexion.php';
+    if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    }
+    try {
+        return $con->query("SELECT valor FROM `respuesta-preguntas` WHERE id_usuario = {$_SESSION["usuario"]} AND id_seccion={$id}");
+    } catch (Exception $e) {
+        echo "Error!!" . $e->getMessage() . "<br>";
+        return false;
+    }
+}
+
+function scorePregunta($id)
+{
+    include 'conexion.php';
+    if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    }
+    try {
+        return $con->query("SELECT IFNULL(
+            (SELECT SUM(valor) FROM `respuesta-preguntas` WHERE id_usuario = {$_SESSION["usuario"]} AND id_seccion = {$id}),
+            0
+          ) AS total");
+    } catch (Exception $e) {
+        echo "Error!!" . $e->getMessage() . "<br>";
+        return false;
+    }
+}
+
 function myScore($id){
     include 'conexion.php';
     if(!isset($_SESSION)) 

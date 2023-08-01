@@ -34,8 +34,8 @@ $nombre = 'Inteligencia Emocional';
                 // Definir las áreas de habilidad y sus valores correspondientes
                 $areas_de_habilidad = array(
                     "Conciencia emocional" => 0,
-                    "Control emocional (equilibrio)" => 0,
-                    "Diagnóstico emocional (empatía)" => 0,
+                    "Control emocional" => 0,
+                    "Diagnóstico emocional" => 0,
                     "Respuesta emocional" => 0
                 );
 
@@ -44,32 +44,14 @@ $nombre = 'Inteligencia Emocional';
                     $pregunta = "pregunta" . $i;
                     if (isset($_POST[$pregunta])) {
                         $puntaje = intval($_POST[$pregunta]);
-                        // Sumar el puntaje al área de habilidad correspondiente
-                        switch ($i) {
-                            case 1:
-                            case 2:
-                            case 4:
-                            case 6:
-                            case 9:
-                            case 10:
-                            case 11:
-                            case 12:
-                                $areas_de_habilidad["Conciencia emocional"] += $puntaje;
-                                break;
-                            case 3:
-                            case 7:
-                                $areas_de_habilidad["Diagnóstico emocional (empatía)"] += $puntaje;
-                                break;
-                            case 5:
-                            case 8:
-                                $areas_de_habilidad["Respuesta emocional"] += $puntaje;
-                                break;
-                            case 10:
-                            case 12:
-                                $areas_de_habilidad["Control emocional (equilibrio)"] += $puntaje;
-                                break;
-                            default:
-                                break;
+                        if ($puntaje==10 || $puntaje==5 ){
+                            $areas_de_habilidad["Conciencia emocional"] += $puntaje;
+                        }else if ($puntaje/3==10 || $puntaje/3==5 ){
+                            $areas_de_habilidad["Control emocional"] += $puntaje/3;
+                        }else if ($puntaje/4==10 || $puntaje/4==5 ){
+                            $areas_de_habilidad["Diagnóstico emocional"] += $puntaje/4;
+                        }else if ($puntaje/5==10 || $puntaje/5==5 ){
+                            $areas_de_habilidad["Respuesta emocional"] += $puntaje/5;
                         }
                     }
                 }
@@ -95,7 +77,7 @@ $nombre = 'Inteligencia Emocional';
                 if ($conn->connect_error) {
                     die("Error al conectar a la base de datos: " . $conn->connect_error);
                 }
-                $id = 110;
+                $id = 111;
                 $suma = 0;
                 // Insertar los resultados en la tabla
                 foreach ($areas_de_habilidad as $area => $puntaje) {

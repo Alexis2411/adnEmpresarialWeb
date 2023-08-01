@@ -65,7 +65,7 @@ $nombre = 'Inteligencia Emocional';
 
                     // Mostrar los resultados
                     echo "<h2>Suma total de cada inciso:</h2>";
-                    echo "Suma a: $suma_a_total<br>";
+                    echo "Suma a: $suma_a_total <br>";
                     echo "Suma b: $suma_b_total<br>";
                     echo "Suma c: $suma_c_total<br>";
                     echo "Suma d: $suma_d_total<br>";
@@ -115,6 +115,13 @@ $nombre = 'Inteligencia Emocional';
                         } else {
                             echo "Error al actualizar los resultados: " . $conn->error;
                         }
+                        $suma = ($suma_a_total + $suma_b_total + $suma_c_total + $suma_d_total);
+                        $sql_insertar = "INSERT INTO `resultado` (fecha, resultado, id_seccion, id_usuario) VALUES (NOW(),$suma, 49,  " . $_SESSION['usuario'] . ")";
+                        if ($conn->multi_query($sql_insertar) === TRUE) {
+                            echo "Resultados guardados correctamente en la base de datos.";
+                        } else {
+                            echo "Error al guardar los resultados: " . $conn->error;
+                        }
                     } else {
                         // Si no existe un resultado, realizar la inserción normalmente
                         $sql_insertar = "INSERT INTO `respuesta-preguntas` (id_usuario, id_pregunta, id_seccion, valor) VALUES ";
@@ -129,10 +136,20 @@ $nombre = 'Inteligencia Emocional';
                         } else {
                             echo "Error al guardar los resultados: " . $conn->error;
                         }
+                        $suma = ($suma_a_total + $suma_b_total + $suma_c_total + $suma_d_total) / 7;
+                        $sql_insertar = "INSERT INTO `resultados` (fecha, resultado, id_seccion, id_usuario) VALUES (NOW(),$suma, 49,  " . $_SESSION['usuario'] . ")";
+                        if ($conn->multi_query($sql_insertar) === TRUE) {
+                            echo "Resultados guardados correctamente en la base de datos.";
+                        } else {
+                            echo "Error al guardar los resultados: " . $conn->error;
+                        }
                     }
+
                 } else {
                     echo "Error al verificar la existencia de resultados: " . $conn->error;
                 }
+
+
 
                 // Cerrar la conexión
                 $conn->close(); ?>

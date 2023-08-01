@@ -30,22 +30,22 @@ include "includes/function/session.php";
         <div class="col-md-6">
             <div class="jumbotron bg-ligth">
                 <div class="container barra">
-                    <h1 class="text-center"><strong>Estilos de Creatividad</strong></h1>
+                    <h1 class="text-center"><strong>Reajuste Social</strong></h1>
                     <p class="text-justify">
                     <h3><strong>Descripción:</strong></h3>
                     <ol>
                         <li>
-                            Responda a cada reactivo seleccionando la opción más adecuada para usted. Piense en la forma
-                            en que suele responder en ese tipo de situaciones, y no en la manera en que le gustaría
-                            responder o en la que cree que debería hacerlo.
+                            Marque cualquiera de las siguientes situaciones que haya experimentado en el último año.
+                            Utilice las cifras de la columna izquierda y súmelas para obtener su puntuación.
+
+
                         </li>
                         <li>
                             Sea honesto.
                         </li>
 
                         <li>
-                            No existen respuestas correctas o incorrectas y <strong>solamente puede elegir una
-                                opción.</strong>
+                            No existen respuestas correctas o incorrectas
                         </li>
                         </ul>
                         </p>
@@ -54,7 +54,6 @@ include "includes/function/session.php";
                             Los cuestionarios serán procesados automáticamente. <br>
                             De antemano muchas gracias por su colaboración.
                         </p>
-
                 </div>
             </div>
             <!-- Contenido destabado -->
@@ -67,9 +66,7 @@ include "includes/function/session.php";
             $passed = "badge-success";
             $mediumPassed = "badge-warning";
             $noPassed = "badge-danger";
-            $resultado = myScore(49);
-
-
+            $resultado = myScore(42);
 
             if (mysqli_num_rows($resultado) > 0) {
                 ?>
@@ -85,7 +82,7 @@ include "includes/function/session.php";
                         </thead>
                         <tbody>
                             <?php
-                            $resultado = myScore(49);
+                            $resultado = myScore(42);
 
                             // Mostrar los resultados en una tabla
                             while ($fila = mysqli_fetch_assoc($resultado)) {
@@ -104,7 +101,7 @@ include "includes/function/session.php";
                     <!-- Contenido 4 columnas -->
                     <?php
                     if (isset($_SESSION['usuario'])) {
-                        $seccion = obtSeccion(49, 49);
+                        $seccion = obtSeccion(42, 42);
                         if ($seccion) {
                             foreach ($seccion as $row) {
                                 ?>
@@ -115,7 +112,7 @@ include "includes/function/session.php";
                                         </h5>
                                         <?php
                                         if (mysqli_num_rows($resultado) > 0) {
-                                            $complete = scorePregunta(49);
+                                            $complete = scorePregunta(42);
                                             ?>
                                             <div class="card-body">
                                                 <div id="accordion">
@@ -141,25 +138,22 @@ include "includes/function/session.php";
                                                                     <span class="badge
                                                                         <?php
                                                                         if
-                                                                        ($result1["total"] <= 79) {
+                                                                        ($result1["total"] <= 122) {
                                                                             echo $noPassed;
-                                                                        } elseif ($result1["total"] > 79 && $result1["total"] <= 114) {
+                                                                        } elseif ($result1["total"] > 123 && $result1["total"] <= 346) {
                                                                             echo $mediumPassed;
-                                                                        } elseif ($result1["total"] > 115) {
+                                                                        } elseif ($result1["total"] >= 347) {
                                                                             echo $passed;
                                                                         }
                                                                         ?> float-right">
 
-                                                                        <?php echo $result1["total"] / 4; ?>
-                                                                        / 175
+                                                                        <?php echo $result1["total"]; ?>
+                                                                        / 2577
                                                                     </span>
 
 
                                                                 </h3>
                                                             </div>
-                                                            <?php
-
-                                                            ?>
                                                             <div id="collapseOne" class="panel-collapse collapse in"
                                                                 aria-labelledby="headingOne" data-parent="#accordion">
                                                                 <div class="card-body">
@@ -176,129 +170,35 @@ include "includes/function/session.php";
                                                                         </thead>
                                                                         <tbody>
                                                                             <?php
-                                                                            $respuestas = scoreRespuestas(49);
-                                                                            $valor = $respuestas->fetch_assoc();
-                                                                            $valor1 = $valor['valor'] / 7; // Acceder al valor específico del arreglo
+                                                                            $valor = $result1["total"];
                                                                             ?>
-
                                                                             <tr>
                                                                                 <td>
-                                                                                    Imaginar
+                                                                                    Score
+                                                                                </td>
                                                                                 <td class="text-center">
                                                                                     <?php
-                                                                                    if ($valor1 <= 19) {
+                                                                                    if ($valor <= 122) {
                                                                                         echo '&#9679;';
                                                                                     }
                                                                                     ?>
                                                                                 </td>
                                                                                 <td class="text-center">
                                                                                     <?php
-                                                                                    if ($valor1 > 19 && $valor1 <= 28) {
+                                                                                    if ($valor > 123 && $valor < 346) {
                                                                                         echo '&#9679;';
                                                                                     }
                                                                                     ?>
                                                                                 </td>
                                                                                 <td class="text-center">
                                                                                     <?php
-                                                                                    if ($valor1 > 29) {
+                                                                                    if ($valor >= 347) {
                                                                                         echo '&#9679;';
                                                                                     }
                                                                                     ?>
                                                                                 </td>
                                                                             </tr>
-                                                                            <?php
-                                                                            $valor = $respuestas->fetch_assoc();
-                                                                            $valor1 = $valor['valor'] / 7; // Acceder al valor específico del arreglo
-                                                                            ?>
-
-                                                                            <tr>
-                                                                                <td>
-                                                                                    Control Incubar
-                                                                                </td>
-                                                                                <td class="text-center">
-                                                                                    <?php
-                                                                                    if ($valor1 <= 20) {
-                                                                                        echo '&#9679;';
-                                                                                    }
-                                                                                    ?>
-                                                                                </td>
-                                                                                <td class="text-center">
-                                                                                    <?php
-                                                                                    if ($valor1 > 20 && $valor1 <= 29) {
-                                                                                        echo '&#9679;';
-                                                                                    }
-                                                                                    ?>
-                                                                                </td>
-                                                                                <td class="text-center">
-                                                                                    <?php
-                                                                                    if ($valor1 > 29) {
-                                                                                        echo '&#9679;';
-                                                                                    }
-                                                                                    ?>
-                                                                                </td>
-                                                                            </tr>
-                                                                            <?php
-                                                                            $valor = $respuestas->fetch_assoc();
-                                                                            $valor1 = $valor['valor'] / 7; // Acceder al valor específico del arreglo
-                                                                            ?>
-
-                                                                            <tr>
-                                                                                <td>
-                                                                                    Invertir </td>
-                                                                                <td class="text-center">
-                                                                                    <?php
-                                                                                    if ($valor1 <= 20) {
-                                                                                        echo '&#9679;';
-                                                                                    }
-                                                                                    ?>
-                                                                                </td>
-                                                                                <td class="text-center">
-                                                                                    <?php
-                                                                                    if ($valor1 > 20 && $valor1 <= 29) {
-                                                                                        echo '&#9679;';
-                                                                                    }
-                                                                                    ?>
-                                                                                </td>
-                                                                                <td class="text-center">
-                                                                                    <?php
-                                                                                    if ($valor1 > 29) {
-                                                                                        echo '&#9679;';
-                                                                                    }
-                                                                                    ?>
-                                                                                </td>
-                                                                            </tr>
-                                                                            <?php
-                                                                            $valor = $respuestas->fetch_assoc();
-                                                                            $valor1 = $valor['valor'] / 7; // Acceder al valor específico del arreglo
-                                                                            ?>
-
-                                                                            <tr>
-                                                                                <td>
-                                                                                    Mejorar
-                                                                                </td>
-                                                                                <td class="text-center">
-                                                                                    <?php
-                                                                                    if ($valor1 <= 18) {
-                                                                                        echo '&#9679;';
-                                                                                    }
-                                                                                    ?>
-                                                                                </td>
-                                                                                <td class="text-center">
-                                                                                    <?php
-                                                                                    if ($valor1 > 18 && $valor1 <= 26) {
-                                                                                        echo '&#9679;';
-                                                                                    }
-                                                                                    ?>
-                                                                                </td>
-                                                                                <td class="text-center">
-                                                                                    <?php
-                                                                                    if ($valor1 >= 27) {
-                                                                                        echo '&#9679;';
-                                                                                    }
-                                                                                    ?>
-                                                                                </td>
-                                                                            </tr>
-
+                                                                        </tbody>
                                                                     </table>
                                                                 </div>
                                                             </div>
@@ -307,15 +207,15 @@ include "includes/function/session.php";
 
                                                     <div class="col-md-12">
                                                         <?php
-                                                        $total = $result1["total"] / 4;
+                                                        $total = $result1["total"];
                                                         ?>
                                                         <div class="card card-default
                                                                                                                                       <?php
-                                                                                                                                      if ($total <= 79) {
+                                                                                                                                      if ($total <= 122) {
                                                                                                                                           echo $noPassed;
-                                                                                                                                      } else if ($total > 79 && $total <= 114) {
+                                                                                                                                      } else if ($total > 123 && $total <= 346) {
                                                                                                                                           echo $mediumPassed;
-                                                                                                                                      } else if ($total > 114) {
+                                                                                                                                      } else if ($total >= 347) {
                                                                                                                                           echo $passed;
                                                                                                                                       }
 
@@ -326,7 +226,7 @@ include "includes/function/session.php";
                                                                 <h1>
                                                                     <strong><i class="fas fa-award"></i> PUNTUACIÓN TOTAL:
                                                                         <?php
-                                                                        echo $total; ?> / 175
+                                                                        echo $total; ?> / 2577
                                                                     </strong>
                                                                 </h1>
                                                             </div>
@@ -334,7 +234,7 @@ include "includes/function/session.php";
                                                         <div class="card-header text-light text-center">
                                                             <a class="btn btn-info"
                                                                 style="font-size: 6rem; width: fit-content; margin: 0;"
-                                                                href="PreguntasEstilos.php">Reintentar</a>
+                                                                href="PreguntasReajuste.php">Reintentar</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -344,7 +244,7 @@ include "includes/function/session.php";
                                             ?>
                                             <a class="btn btn-info mx-auto"
                                                 style="font-size: 3rem; width: fit-content; margin-top: 2rem;"
-                                                href="PreguntasEstilos.php">Empezar</a>
+                                                href="PreguntasReajuste.php">Empezar</a>
                                             <?php
                                         }
                                         ?>
@@ -393,6 +293,7 @@ include "includes/function/session.php";
         </div>
 
     </div>
+
     <!-- Pie de pagina -->
     <footer class="page-footer font-small text-secondary pt-4"
         style="background-color:#404040; font-family:'Raleway', sans-serif;">

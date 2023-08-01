@@ -43,10 +43,10 @@ $nombre ='Inteligencia Emocional';
                             ideas, yo tal vez...</p>
                         <input type="radio" name="pregunta2" value="0"> lo dejaría pasar y no haría nada para evitar una
                         confrontación.<br>
-                        <input type="radio" name="pregunta2" value="5"> después, y en privado, le diría que aprecio que
+                        <input type="radio" name="pregunta2" value="15"> después, y en privado, le diría que aprecio que
                         se me
                         dé crédito por mi trabajo y mis ideas.<br>
-                        <input type="radio" name="pregunta2" value="10"> le agradecería en público por tomar en cuenta
+                        <input type="radio" name="pregunta2" value="30"> le agradecería en público por tomar en cuenta
                         mi
                         trabajo y mis ideas, y luego hablaría más acerca de mis contribuciones.<br>
                     </fieldset>
@@ -54,8 +54,8 @@ $nombre ='Inteligencia Emocional';
                     <fieldset class="pregunta">
                         <p>3. Cuando me acerco a otra persona para iniciar una conversación y esa persona no responde,
                             ...</p>
-                        <input type="radio" name="pregunta3" value="5"> trato de animarla contándole algo gracioso.<br>
-                        <input type="radio" name="pregunta3" value="10"> le pregunto si quiere hablar de lo que está
+                        <input type="radio" name="pregunta3" value="20"> trato de animarla contándole algo gracioso.<br>
+                        <input type="radio" name="pregunta3" value="40"> le pregunto si quiere hablar de lo que está
                         pensando.<br>
                         <input type="radio" name="pregunta3" value="0"> la dejaría sola y buscaría a alguien más con
                         quién hablar.<br>
@@ -65,7 +65,7 @@ $nombre ='Inteligencia Emocional';
                         <p>4. Cuando ingreso a un grupo social, generalmente...</p>
                         <input type="radio" name="pregunta4" value="0"> permanezco callado y espero a que los demás me
                         hablen.<br>
-                        <input type="radio" name="pregunta4" value="10"> trato de pensar en decir algo agradable a
+                        <input type="radio" name="pregunta4" value="50"> trato de pensar en decir algo agradable a
                         alguien.<br>
                         <input type="radio" name="pregunta4" value="0"> busco formas de ser la estrella de la fiesta o
                         la fuente de energía y de diversión.<br>
@@ -84,8 +84,8 @@ $nombre ='Inteligencia Emocional';
                     <fieldset class="pregunta">
                         <p>6. Cuando alguien que no me gusta se siente atraído afectivamente hacia mí, generalmente...
                         </p>
-                        <input type="radio" name="pregunta6" value="10"> le digo directamente que no me interesa.<br>
-                        <input type="radio" name="pregunta6" value="5"> respondo de manera amistosa pero fría o
+                        <input type="radio" name="pregunta6" value="30"> le digo directamente que no me interesa.<br>
+                        <input type="radio" name="pregunta6" value="15"> respondo de manera amistosa pero fría o
                         distante.<br>
                         <input type="radio" name="pregunta6" value="0"> ignoro a esa persona y trato de evitarla.<br>
                     </fieldset>
@@ -94,9 +94,9 @@ $nombre ='Inteligencia Emocional';
                         <p>7. Cuando estoy en compañía de dos personas que tienen puntos de vista diametralmente
                             opuestos acerca de un tema (por ejemplo, política, aborto, guerra) y discuten al respecto …
                         </p>
-                        <input type="radio" name="pregunta7" value="10"> busco algo en lo que ambos estén de acuerdo y
+                        <input type="radio" name="pregunta7" value="40"> busco algo en lo que ambos estén de acuerdo y
                         hago hincapié en ello.<br>
-                        <input type="radio" name="pregunta7" value="5"> promuevo una batalla verbal.<br>
+                        <input type="radio" name="pregunta7" value="20"> promuevo una batalla verbal.<br>
                         <input type="radio" name="pregunta7" value="0"> les sugiero que dejen de discutir y que se
                         tranquilicen.<br>
                     </fieldset>
@@ -104,9 +104,9 @@ $nombre ='Inteligencia Emocional';
                     <fieldset class="pregunta">
                         <p>8. Cuando estoy practicando un deporte y voy en segundo o en último lugar, ...</p>
                         <input type="radio" name="pregunta8" value="0"> me pongo muy nervioso y espero no sofocarme.<br>
-                        <input type="radio" name="pregunta8" value="5"> considero esto como una oportunidad para
+                        <input type="radio" name="pregunta8" value="25"> considero esto como una oportunidad para
                         sobresalir.<br>
-                        <input type="radio" name="pregunta8" value="10"> permanezco concentrado y hago mi mayor
+                        <input type="radio" name="pregunta8" value="50"> permanezco concentrado y hago mi mayor
                         esfuerzo.<br>
                     </fieldset>
 
@@ -126,7 +126,7 @@ $nombre ='Inteligencia Emocional';
                         <p>10. En una situación en la que otra persona se enoja mucho y me grita, yo...</p>
                         <input type="radio" name="pregunta10" value="0"> también me enojo. No acepto eso de nadie.<br>
                         <input type="radio" name="pregunta10" value="0"> me voy. No tiene caso discutir.<br>
-                        <input type="radio" name="pregunta10" value="10"> primero escucho y luego trato de discutir el
+                        <input type="radio" name="pregunta10" value="30"> primero escucho y luego trato de discutir el
                         asunto.<br>
                     </fieldset>
 
@@ -134,7 +134,7 @@ $nombre ='Inteligencia Emocional';
                         <p>11. Cuando me encuentro con alguien que acaba de tener una gran pérdida o de vivir una
                             tragedia, ...</p>
                         <input type="radio" name="pregunta11" value="0"> realmente no sé qué hacer o qué decir.<br>
-                        <input type="radio" name="pregunta11" value="10"> le digo que lo siento mucho y trato de
+                        <input type="radio" name="pregunta11" value="40"> le digo que lo siento mucho y trato de
                         brindarle apoyo.<br>
                         <input type="radio" name="pregunta11" value="0"> le comparto mi experiencia de una pérdida o
                         tragedia similar.<br>
@@ -143,10 +143,10 @@ $nombre ='Inteligencia Emocional';
                     <fieldset class="pregunta">
                         <p>12. Cuando alguien hace una broma racista o cuenta una historia despectiva acerca de un
                             miembro del sexo opuesto en una empresa mixta, yo generalmente...</p>
-                        <input type="radio" name="pregunta12" value="10"> señalo que es inapropiado e inaceptable, y
+                        <input type="radio" name="pregunta12" value="50"> señalo que es inapropiado e inaceptable, y
                         luego cambio el tema.<br>
                         <input type="radio" name="pregunta12" value="0"> lo ignoro para no hacer una escena.<br>
-                        <input type="radio" name="pregunta12" value="5"> me enojo mucho y digo a esa persona lo que
+                        <input type="radio" name="pregunta12" value="25"> me enojo mucho y digo a esa persona lo que
                         pienso de lo que acaba de decir.<br>
                     </fieldset>
 
