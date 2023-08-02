@@ -18,7 +18,6 @@ $nombre ='Inteligencia Emocional';
 
 <body style="background: lightgray; font-size: 20px; line-height: 25px; margin:0; font-family:'Raleway', sans-serif;">
     <?php
-    echo $_SESSION["usuario"];
 
     include("includes/templates/menu.php");
     include("includes/templates/navbar.php");

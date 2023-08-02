@@ -46,9 +46,9 @@ session_start();
                             <h2 class="card-title">Desarrollo del Auto conocimiento</h2>
                             <p class="card-text">
                                 <a href="EncuestaAutoconocimiento.php">- Evaluación del Desarrollo del autoconocimiento</a><br>
-                                <a href="encuesta.php">- Evaluación de la inteligencia emocional</a><br>
+                                <a href="EncuestaIE.php">- Evaluación de la inteligencia emocional</a><br>
                                 <a href="EncuestaCognitivo.php">- Identificación del estilo cognoscitivo</a><br>
-                                <a href="encuesta.php">- Locus de control</a><br>
+                                <a href="EncuestaLocus.php">- Locus de control</a><br>
                                 <a href="EncuestaAmbiguedad.php">- Tolerancia a la Ambigüedad</a>
                         </div>
                         <div class="card text-white bg-secondary py-4 text-center"><a>Seleccione una para empezar</a></div>
@@ -62,7 +62,7 @@ session_start();
                                 <a href="EncuestaEstres.php">- Manejo del estrés</a><br>
                                 <a href="EncuestaTiempo.php">- Administración del tiempo</a><br>
                                 <a href="EncuestaPersonalidad.php">- Personalidad tipo A</a><br>
-                                <a href="encuesta.php">- Reajuste Social</a><br>
+                                <a href="EncuestaReajuste.php">- Reajuste Social</a><br>
                         </div>
                         <div class="card text-white bg-secondary py-4 text-center"><a>Seleccione una para empezar</a></div>
                     </div>
@@ -75,7 +75,7 @@ session_start();
                                 <a href="EncuestaSolAnaCrea.php">- Solución de problemas, creatividad e innovación</a><br>
                                 <a href="EncuestaCreatividad.php">- ¿Qué tan creativo eres?</a><br>
                                 <a href="EncuestaActitudInnovadora.php">- Actitud Innovadora</a><br>
-                                <a href="encuesta.php">- Estilo creativo</a><br>
+                                <a href="EncuestaEstilos.php">- Estilo creativo</a><br>
                         </div>
                         <div class="card text-white bg-secondary py-4 text-center"><a>Seleccione una para empezar</a></div>
                     </div>

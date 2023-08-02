@@ -49,7 +49,6 @@ session_start();
                             <h2 class="card-title">Comunicación de Apoyo</h2>
                             <p class="card-text">
                                 <a href="EncuestaApoyo.php">- Evaluación para la Comunicación de Apoyo</a><br>
-                                <a href="Encuesta.php">- Estilos de Comunicación</a><br>
                         </div>
                         <div class="card text-white bg-secondary  py-4 text-center"><a>Seleccione una para empezar</a></div>
                     </div>
