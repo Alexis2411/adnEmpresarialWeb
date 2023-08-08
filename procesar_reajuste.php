@@ -48,8 +48,8 @@ $nombre = 'Inteligencia Emocional';
                     }
                 }
                 $servername = "localhost";
-                $username = "adnempre_admin";
-                $password = "Uv2020@#$";
+                $username = "adnempresarialco_admin";
+                $password = "Rabodeperro2";
                 $dbname = "adnempresarialco_demo2";
 
                 // Crear una conexión

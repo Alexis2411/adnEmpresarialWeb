@@ -9,8 +9,8 @@
 // PROD
 
     if(!defined('HOST_DB'))define('HOST_DB','localhost');
-    if(!defined('USER_DB'))define('USER_DB','adnempre_admin');
-    if(!defined('PASS_DB'))define('PASS_DB','Uv2020@#$');
+    if(!defined('USER_DB'))define('USER_DB','adnempresarialco_admin');
+    if(!defined('PASS_DB'))define('PASS_DB','Rabodeperro2');
     if(!defined('NAME_DB'))define('NAME_DB','adnempresarialco_demo2');
 
     $con = new mysqli(HOST_DB,USER_DB,PASS_DB,NAME_DB);

@@ -49,8 +49,8 @@ $nombre = 'Inteligencia Emocional';
 
                 // Realizar la conexión a la base de datos (reemplaza los valores con tus credenciales)
                 $servername = "localhost";
-                $username = "adnempre_admin";
-                $password = "Uv2020@#$";
+                $username = "adnempresarialco_admin";
+                $password = "Rabodeperro2";
                 $dbname = "adnempresarialco_demo2";
 
                 // Crear una conexión

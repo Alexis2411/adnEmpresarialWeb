@@ -1,0 +1,39 @@
+# Query: uv2020
+# ContextLines: 1
+
+7 resultados - Archivos de 7
+
+procesar_cuestionario.php:
+  69                  $username = "adnempre_admin";
+  70:                 $password = "Rabodeperro2";
+  71                  $dbname = "adnempresarialco_demo2";
+
+procesar_Estilo.php:
+  79                  $username = "adnempre_admin";
+  80:                 $password = "Rabodeperro2";
+  81                  $dbname = "adnempresarialco_demo2";
+
+procesar_lotus.php:
+  52                  $username = "adnempre_admin";
+  53:                 $password = "Rabodeperro2";
+  54                  $dbname = "adnempresarialco_demo2";
+
+procesar_reajuste.php:
+  51                  $username = "adnempre_admin";
+  52:                 $password = "Rabodeperro2";
+  53                  $dbname = "adnempresarialco_demo2";
+
+admin/templates/conexion.php:
+  2  function conexion(){
+  3:     return mysqli_connect('localhost', 'adnempre_admin', 'Rabodeperro2', 'adnempresarialco_demo2');   
+  4  }
+
+includes/function/conexion.php:
+  12      if(!defined('USER_DB'))define('USER_DB','adnempre_admin');
+  13:     if(!defined('PASS_DB'))define('PASS_DB','Rabodeperro2');
+  14      if(!defined('NAME_DB'))define('NAME_DB','adnempresarialco_demo2');
+
+includes/function/database.php:
+  23  	private $user='adnempre_admin';//Usuario de tu base de datos
+  24: 	private $pass='Rabodeperro2';//Contraseña del usuario de la base de datos
+  25  	private $db='adnempre_encuesta';//Nombre de la base de datos
